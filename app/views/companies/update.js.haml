@@ -1,0 +1,6 @@
+ProfilePage.hide_spinner("#{params[:from]}");
+
+- if @company.errors.present?
+  ProfilePage.show_error_message("#{params[:from]}");
+- else
+  ProfilePage.show_success_message("#{params[:from]}");

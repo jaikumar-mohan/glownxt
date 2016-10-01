@@ -1,0 +1,33 @@
+= form_for @company, url: final_step_users_url, method: :post, html: { class: 's-form b-auth' }, remote: true do |f|
+
+  = hidden_field_tag 'from_signup', 1 
+
+  = f.fields_for :addresses, @company.primary_address do |f| 
+    .s-form__group
+      = render 'users/autocomplete_field', f: f, field_name: :country_id, label_title: 'Country' 
+      = render 'users/autocomplete_field', f: f, field_name: :state_id, label_title: 'State' 
+      = render 'users/sign_up/step_3_field', field_name: :city, placeholder: 'City'
+      = render 'users/sign_up/step_3_field', field_name: :zip, placeholder: 'Postal/Zip Code'
+      = render 'users/sign_up/step_3_field', field_name: :street, placeholder: 'Street'
+      %span.s-inline-input{ class: "" }
+        = f.label :tel, 'Telephone', class: ''
+        %span{ class: 'company_tel_prefix pull-left' }
+        = f.text_field :tel, id: 'company_tel', class: 's-input'
+      %span.s-inline-input{ class: "" }
+        = label_tag "company[company_website]", 'Website', class: '' 
+        = text_field_tag "company[company_website]", nil, { class: "js-input_website" }
+
+  = render 'users/tags_block', f: f, company: @company 
+
+  .s-form__arrow-down
+  .s-form__group
+    .s-textarea
+      = f.text_area :products_description, rows: 4, placeholder: "You can describe services products in detail here." 
+  .s-form__group
+    .s-textarea
+      = f.text_area :company_mission, rows: 4, placeholder: "You can describe company mission in detail here."
+  .s-form__group
+    .s-textarea
+      = f.text_area :company_services, rows: 10, placeholder: "#{@company.company_name} offers to their customers a series of ....... complete your offerings here. This is what the network will see on your profile page. You can always update this later."       
+
+  = render 'users/sign_up/submit_block_step_3'

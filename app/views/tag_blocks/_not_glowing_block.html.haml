@@ -1,0 +1,9 @@
+%table.b-connections__table.not_glowing_block
+  %tr.b-connections__table-row
+    %td.b-connections__table-cell
+      = render 'tag_blocks/not_glowing_info', tag_type: 'offering'
+      = render 'tag_blocks/not_glowing_tags', tags: @top_wanted_capabilities_not_glow, tag_type: :offer_tags
+
+    %td.b-connections__table-cell
+      = render 'tag_blocks/not_glowing_info', tag_type: 'looking'
+      = render 'tag_blocks/not_glowing_tags', tags: @top_needed_capabilities_not_glow, tag_type: :looked_tags

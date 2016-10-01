@@ -1,0 +1,32 @@
+- provide(:title, 'Welcome')
+- content_for :page_heading do
+  .company-welcome
+    Peter @
+    %span ACME
+%br/
+.row
+  %h3.t-title
+    Elevator Pitch / Edit by changing text
+
+.b-connections
+  .row
+    .b-message-textbox.pull-left.clearfix
+      %form.new_micropost.s-ta-single
+        .field
+          %textarea#micropost_content.fullwidth{:name => "micropost[content]", :placeholder => "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.", :rows => "8"}
+        .button-container.pull-right
+          %span.countdown 140 characters remaining
+          %input.btn.btn-primary{:name => "commit", :type => "submit", :value => "Post"}
+    .b-message-textbox.pull-right.clearfix
+      %form.new_micropost.s-ta-single
+        .field
+          %textarea#micropost_content.fullwidth{:name => "micropost[content]", :placeholder => "Share a Glow with your followers", :rows => "8"}
+        .button-container.pull-right
+          %span.countdown 140 characters remaining
+          %input.btn.btn-primary{:name => "commit", :type => "submit", :value => "Post"}
+  .row
+    = render 'intelligence'
+
+    .b-feed.pull-right
+      %h3 Glows feed
+      = render 'glows_feed'

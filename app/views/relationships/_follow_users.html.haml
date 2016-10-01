@@ -1,0 +1,19 @@
+- users.each do |user|
+  %li.b-followers__item.b-comment.post
+    .b-followers__tools
+      .follow_button.pull-right
+        = render 'relationships/follow_block', company: user.company
+      / .s-dropdown
+      /   %button.s-dropdown__toggler
+      /     .s-dropdown__toggler-icon
+      /   %ul.s-dropdown__list
+      /     %li= link_to 'Glow to Nick Mayburg', '#', class: 's-dropdown__item'
+      /     %li= link_to 'Send direct message', '#', class: 's-dropdown__item'
+      /     %li= link_to 'Add or remove from list', '#', class: 's-dropdown__item'
+      /     %li.s-dropdown__list-divider
+      /     %li= link_to 'Block Nick Mayburg', '#', class: 's-dropdown__item'
+      /     %li= link_to 'Report Nick Mayburg', '#', class: 's-dropdown__item'
+    .b-followers__info
+      .b-followers__name #{user.full_name}
+      .b-followers__description
+        #{user.company.company_profile}

@@ -1,0 +1,12 @@
+= form_for company, url: change_logo_profile_path(company), html: { class: "file-field-container", multipart: true, method: :patch }, remote: true, authenticity_token: true do |f|
+
+  = f.label :logo, 'Company Logo', class: 's-single-label'
+  = f.file_field :logo, size: 2, class: 'hidden'
+  .b-company-logo
+    .b-company-logo__image
+      = image_tag company.logo.url(:large)
+    .b-company-logo__tools
+      %button.s-btn.js-file-emulator Browse
+      .b-company-logo__text * jpg, jpeg, png, gif only (less than 2MB)
+    %span.upload_error_message.hidden.pull-left
+    .company-progress-bar-container.pull-left   

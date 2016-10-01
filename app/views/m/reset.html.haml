@@ -1,0 +1,9 @@
+.c-content
+  = render 'm/shared/page_title', title: 'Reset your Password', description: 'Can\'t sign in? Forgot your password? Enter your email address below and we\'ll send your password reset instructions.'
+  %form.s-form
+    %p= render 'm/shared/inline_input', id: 'a', label: 'Email Address', type: 'email'
+    %p.s-form__footer
+      %button.s-btn Reset
+
+
+

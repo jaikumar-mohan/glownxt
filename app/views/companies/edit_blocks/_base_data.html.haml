@@ -1,0 +1,43 @@
+.b-profile__content#company_base_data
+  .b-profile__title Company Profile
+  / .b-profile__subtitle General
+
+  = render 'companies/edit_blocks/change_logo', company: current_user.company
+
+  = form_for(current_user.company, url: profile_path(current_user.company), method: :patch, html: { class: 'b-form' }, remote: true) do |f|
+    = render 'shared/error_messages', object: f.object
+    = hidden_field_tag :from, :base_data
+
+
+    = f.fields_for :addresses, @company.primary_address do |a|
+
+      %p
+        = a.label :company_name, 'Company Name', class: 's-single-label'
+        = f.text_field :company_name, class: 's-input'
+      %p
+        = a.label :street, 'Street', class: 's-single-label'
+        = a.text_field :street, class: 's-input'
+      %p
+        = a.label :city, 'City', class: 's-single-label'
+        = a.text_field :city, class: 's-input'
+      %p
+        = a.label :zip, 'Postal Code / Zip', class: 's-single-label'
+        = a.text_field :zip, class: 's-input'
+      %p
+        = a.label :state_id, 'State', class: 's-single-label'
+        = text_field_tag :state_id, ( a.object.state.present? ? a.object.state.name : '' ), class: 's-input'
+        = a.hidden_field :state_id, id: 'company_state_id'
+      %p
+        = a.label :country_id, 'Country', class: 's-single-label'
+        = text_field_tag :country_id, ( a.object.country.present? ? a.object.country.name : '' ), class: 's-input'
+        = a.hidden_field :country_id, id: 'company_country_id'
+      %p
+        = a.label :tel, 'Telephone', class: 's-single-label'
+        %span{ class: 'company_tel_prefix pull-left' }
+          = a.object.country.try(:phone_prefix)
+        = a.text_field :tel, id: 'company_tel', class: 's-input'
+      %p
+        = a.label :company_website, 'Web Site', class: 's-single-label'
+        = f.text_field :company_website, class: 's-input'
+   
+    = render 'companies/edit_blocks/submit_block'

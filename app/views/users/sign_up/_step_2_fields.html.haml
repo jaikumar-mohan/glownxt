@@ -1,0 +1,4 @@
+- fields = User::CommonFormFields - ["company_name", "password", "password_confirmation"]
+
+- fields.each do |field_name|
+  = render 'users/sign_up/field', field_name: field_name

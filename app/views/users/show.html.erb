@@ -1,0 +1,47 @@
+<% provide(:title, @user.full_name) %>
+<div class="row">
+  <aside class="span6">
+    <section>
+      <h1>
+        <%= gravatar_for @user, size: 40 %>
+        <%= @user.full_name %>
+      </h1>
+      <% if @user.company_relationship.present? %>
+          <strong>Company: <%= @user.company.company_name %></strong><br>
+      <% end %>
+      <strong>Nickname:</strong><%= @user.handle %> </span>
+    </section>
+    <section>
+      <%= render 'shared/stats' %>
+    </section>
+  </aside>
+
+  <div class="span6">
+    <%= render 'follow_form' if signed_in? %>
+    <div class='b-feed pull-right'>
+      <h3>Glows feed</h3>
+
+      <div class='b-feeds__container connections_feed' id='b-feeds__container'>
+        <% if @microposts.present? %>
+          <%= render partial: 'microposts/micropost', collection: @microposts %>
+
+          <% if @microposts.total_pages > @microposts.current_page %>
+            <nav id='page-nav'>
+              <%= link_to '', load_company_microposts_url(@user.company, page: @microposts.current_page + 1) %>
+            </nav>
+          <% end %>
+        <% else %>
+          <span class='no_glows_yet'>
+            Welcome, add a glow and follow others and see their glows here.
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= content_for :javascript_code do %>
+  Glows.init();
+  MicropostLength.init();
+  MicropostLength.pagination();
+<% end %>

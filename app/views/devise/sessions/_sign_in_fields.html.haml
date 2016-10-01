@@ -1,0 +1,9 @@
+%span.s-inline-input{ class: "required" }
+  = label_tag 'user[email]', 'Email'
+  = text_field_tag 'user[email]', params[:user].present? ? params[:user][:email] : '', { class: 'js-input_email' }
+= error_box(@errors['email']) if @errors && @errors['email'].present?
+
+%span.s-inline-input{ class: "required" }
+  = label_tag 'user[password]', 'Password'
+  = password_field_tag 'user[password]', '', { class: 'js-input_password', type: 'password' }
+= error_box(@errors['password']) if @errors && @errors['password'].present?

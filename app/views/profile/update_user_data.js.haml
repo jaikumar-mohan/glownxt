@@ -1,0 +1,12 @@
+ProfilePage.hide_spinner("#{params[:from]}");
+
+- if @user.errors.present?
+  ProfilePage.show_error_message("#{params[:from]}");
+- else
+  ProfilePage.show_success_message("#{params[:from]}");
+
+$('#company_' + "#{params[:from]}" + ' .fields_container').html("#{escape_javascript(render('profile/user_data_fields'))}")
+
+FormChange.save_changes();
+FormChange.head_foot_links();
+PasswordStrength.init();

@@ -1,0 +1,8 @@
+= form_for Micropost.new, url: company_messages_path(@company), remote: true, html: { class: 'b-post-form' } do |f|
+  .s-textarea
+    = f.text_area :content, class: 'micropost_content', placeholder: "Leave a private Glow message for #{@company.company_name}.", rows: "7"
+  .b-post-form__tools
+    = render 'messages/status_messages'
+    .b-post-form__hint.countdown.share_glow_count 140 characters remaining
+    = f.submit 'POST', class: 's-btn btn'
+    = image_tag 'spinner.gif', class: 'loading_spinner' 

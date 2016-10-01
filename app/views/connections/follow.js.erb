@@ -1,0 +1,5 @@
+$( 'ul.b-comments__list.connections_feed#b-feeds__container' ).replaceWith("<%= escape_javascript(render(
+      'microposts/microposts_block', microposts: @microposts, checkbox1: @checkbox1, checkbox2: @checkbox2
+    )) %>");
+
+MicropostLength.pagination();

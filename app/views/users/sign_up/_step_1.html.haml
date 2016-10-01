@@ -1,0 +1,6 @@
+= form_for(@user, html: { class: 'sign_up_step_1 s-form' }, remote: true) do |f|
+
+  .fields_container
+    = render 'users/sign_up/step_1_fields'
+
+  = render 'users/sign_up/submit_block'

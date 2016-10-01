@@ -1,0 +1,9 @@
+%ul.b-comments__list.connections_feed#b-feeds__container
+  - if microposts.present?
+    = render partial: 'microposts/micropost', collection: microposts
+    - if microposts.total_pages > microposts.current_page
+      %nav#page-nav
+        = link_to '', load_connections_url(page: microposts.current_page + 1, checkbox1: "#{checkbox1}", checkbox2: "#{checkbox2}")
+  - else
+    %span.no_glows_yet
+      Welcome, add a glow and follow others and see their glows here.

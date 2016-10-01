@@ -1,0 +1,39 @@
+.c-content= render 'm/shared/page_title', title: 'Welcome to the network ACME ltd.'
+= render 'm/shared/steps', step: 2
+.c-content
+  %form.s-form.b-auth
+    .b-auth__title
+      You are the administrator for ACME ltd.
+      %br
+      Are your details correct?
+
+    .s-form__group
+      %p= render 'm/shared/inline_input', id: 'a', label: 'First Name'
+      %p= render 'm/shared/inline_input', id: 'b', label: 'Last Name'
+      %p= render 'm/shared/inline_input', id: 'b', label: 'Email Address'
+
+    %p.s-form__btn.b-auth__btn
+      %button.s-btn Update
+
+    .b-auth__text
+      You can always update these details later
+      %br
+      in your membership profile.
+
+    .s-form__arrow-down
+    .s-form__group
+      .s-textarea
+        %textarea{rows: 4, placeholder: 'Your Companies elevator pitch in 250 characters or less ...'}
+
+    .s-form__group
+      .s-textarea
+        %textarea{rows: 4, placeholder: 'ACME ltd. offers what capabilities - type ahead and select as many tags as you want - add new tags if nothing fits your company.'}
+
+    .s-form__group
+      .s-textarea
+        %textarea{rows: 4, placeholder: 'ACME ltd. is looking for what capabilities - type ahead and select  as many tags as you want - add new tags if nothing fits your company.'}
+
+    %p.s-form__footer
+      %button.s-btn Next
+
+

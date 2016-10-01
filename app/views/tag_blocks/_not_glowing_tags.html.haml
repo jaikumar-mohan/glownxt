@@ -1,0 +1,9 @@
+%ul.b-connections__table-labels
+  - if tags.present?
+    - tags.each do |tagname, count|
+      %li.s-label
+        = link_to companies_url(by_tags: tagname, search_by_tags_mode: tag_type) do
+          .s-label__text
+            = tagname
+  - else
+    %span Good news, we couldn't find any

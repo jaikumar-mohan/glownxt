@@ -1,0 +1,13 @@
+%tr.b-connections__table-row
+  %td.b-connections__table-cell
+    .s-rounded-box-compact
+      %h3.b-connections__stats-title Companies we found
+      .b-connections__stats-value 
+        = link_to following_user_path(@company.user) do
+          = current_user.followed_users.size
+  %td.b-connections__table-cell
+    .s-rounded-box-compact
+      %h3.b-connections__stats-title Companies That found us
+      .b-connections__stats-value
+        = link_to followers_user_path(@company.user) do
+          = current_user.followers.size

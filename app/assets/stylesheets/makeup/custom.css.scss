@@ -1,0 +1,698 @@
+.loading_spinner {
+  display: none;
+}
+
+.add_pitch_status {
+  color: #99CC33;
+  display: inline-block;
+  font-size: 13px;
+  margin-right: 15px;
+}
+
+.errors_block {
+  
+}
+
+.group_message_error,
+.group_message_no_companies_error,
+.group_message_no_message_error,
+.group_message_success {
+  color: #CC3333;
+  display: none;
+  font-size: 13px;
+  padding-bottom: 10px; 
+  margin-right: 0px;
+}
+
+.group_message_success {
+  color: #99CC33;
+}
+
+#infscr-loading {
+  width: 200px; 
+  padding-left: 90px; 
+  margin-bottom: 10px;
+  margin-left: 100px; 
+  margin-top: 30px;  
+  overflow: hidden;
+
+  img {
+    float: left; 
+    margin-right: 10px;
+  }
+
+  div {
+    padding-top: 5px;
+
+    em {
+      font-weight: bold;
+    }
+  }
+}
+
+.connections_feed {
+  #infscr-loading {
+    margin-top: 20px;
+    margin-left: 0px; 
+  }
+}
+
+.pull-left {
+  float:left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.search_filter {
+  width: 170px;
+
+  select {
+    margin-left: 10px;
+    color: #F07230;
+    font-size: 14px;
+  }
+}
+
+.s-table.company_table {
+  clear: both;
+  margin-top: 30px;
+
+  div.s-table__header {
+    border-top: 1px solid #9B9B9B;
+  }  
+}
+
+.s-form.search_by_companies {
+  width: 100%;
+}
+
+.search_company_block {
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px; 
+  margin-bottom: 0px;
+
+  .s-form.search_by_companies {
+    label {
+      color: #F07230;
+      font-size: 14px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+  }
+
+  div.s-inline-input {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .pull-left.left_side {
+    margin-right: 10px;
+  }
+
+  .pull-left.right_side {
+    width: 656px;
+  } 
+
+  .s-inline-input.small {
+    width: 150px;
+    margin-right: 12px;
+  }
+
+  .s-inline-input.company_by_name_field {
+    margin-bottom: 16px;
+    width: 333px;
+  }
+
+  .s-btn {
+    margin-top: 23px;
+    line-height: 29px;
+    height: 29px;
+  }
+
+  .s-inline-input.tag_autocomplete_block {
+    height: 90px;
+  }
+}
+
+.companies_loading_spinner {
+  display: none;
+  width: 130px;
+
+  img {
+    float: left; 
+    margin-right: 10px;
+  }
+
+  span {
+    display: block;
+    color: #000;
+    font-size: 14px;
+    text-align: left;
+    text-transform: uppercase;
+   margin-top: 9px;
+  }
+}
+
+.b-private-messages__post-form {
+  .loading_spinner {
+    padding-right: 10px;
+  }
+}
+
+span.company_tel_prefix {
+  background: none repeat scroll 0 0 transparent;
+  border: 1px solid #D7D7D7;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  font-size: 13px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 20px;  
+  color: #3C3C3C;
+  height: 30px;
+  display: block;
+  width: 10px;
+  margin-right: 10px;
+}
+
+#company_base_data {
+  #company_tel {
+    width: 187px;
+  }
+}
+
+.company-progress-bar-container {
+  width: 128px;
+  margin-top: 17px;
+  margin-left: 13px;
+
+  .upload {
+
+    .truncate {
+      width: 135px;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      float: left;
+    }
+
+    .progress-percentage {
+      margin-left: 5px;
+      width: 30px;
+      display: block;
+      float:left;
+    }
+
+    .progress {
+      clear: both;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.upload_error_message {
+  color: rgb(240, 114, 48); 
+  font-size: 12px;
+  font-style: italic; 
+  display: block; 
+  width: 160px; 
+  overflow: hidden; 
+  margin-right: 24px; 
+  line-height: 13px;
+  margin-top: -10px;
+  margin-left: 15px;
+}
+
+.progress {
+  background-color: #F5F5F5;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 20px;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-color: #5CB85C;
+}
+
+div.clear_with_50 {
+  clear: both;
+  height: 50px;
+}
+
+.b-profile__content#company_marketing {
+  div.tag_autocomplete_block {
+    width: 450px;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) inset;
+    padding: 15px;
+  }
+}
+
+#company_services {
+  .s-textarea {
+    width: 400px;
+  }
+
+  .company_textarea_hint {
+    color: #F07230;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    margin-right: 10px;
+  }
+
+  .company_services_block {
+    overflow: hidden;
+    width: 440px;
+  }
+}
+
+.edit_company_profile {
+  .loading_spinner {
+    margin-top: -15px; 
+    margin-right: 19px;
+  }
+
+  .error_message, .success_message {
+    display: none;
+    width: 200px; 
+    margin-right: 60px; 
+    margin-top: -5px;
+    font-size: 14px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-right: 90px;
+  }
+
+  .error_message {
+    color: #F07230;
+  }
+
+  .success_message {
+    color: #99CC33;
+  }
+}
+
+.error-text {
+  font-size: 14px;
+  text-align: left;
+  color: #F07230;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.b-blog {
+  .pagination {
+    span.page {
+      margin-right: 10px;
+    }
+
+    a {
+      font-size: 14px;
+      text-align: left;
+      color: #F07230;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.b-home-form {
+  overflow: hidden;
+
+  .loading_spinner {
+    margin-right: 80px;
+  }
+
+  .b-home-form__row {
+    clear: both;
+
+    &.submit_block {
+      height: 34px;
+
+      &.with_errors {
+        margin-top: -30px;
+      }
+    }
+  }
+
+  .error-text {
+    margin-left: 0px;
+  }
+}
+
+.sign_up_step_1 {
+
+  .error-text {
+    margin-left: 0px;
+  }
+
+  .loading_spinner {
+    margin-right: 200px;
+  }
+
+  .s-form__footer {
+    height: 37px;
+  }
+}
+
+.sign_up_step_2_verification, .sign_up_3  {
+  .b-page-header__description {
+    text-align: center; 
+    color: #F07230;
+  }
+
+  div.tag_autocomplete_block {
+    width: 413px;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) inset;
+    padding: 15px;
+  }
+
+  .tags_block_description {
+    color: #898989;
+    font-style: italic;
+    margin-top: 0px; 
+    margin-bottom: 10px;
+    display: block;
+    font-size: 12px;
+  }  
+}
+
+.sign_up_3 {
+  span.company_tel_prefix {
+    font-weight: bold; 
+    display: block; 
+    padding-bottom: 0px; 
+    padding-top: 0px; 
+    border: none;
+    border-right: 1px solid #D7D7D7;
+    box-shadow: none;
+    border-radius: none;
+    margin-right: 0px;
+    margin-top: -4px; 
+    height: 29px;
+  }
+
+  input#company_tel {
+    width: 150px; 
+    height: 20px;
+    border: none;
+    box-shadow: none;
+    border-radius: none;    
+  }
+
+  .b-company-logo {
+    margin-bottom: 30px;
+
+    .b-company-logo__image {
+      margin-left: 150px;
+    }
+  }
+
+  .company-progress-bar-container {
+    margin-left: 150px; 
+    width: 147px;
+  }
+
+  .upload_error_message {
+    margin-top: 10px; 
+    margin-bottom: -10px;
+    width: 380px; 
+    margin-left: 50px; 
+    color: rgb(240, 114, 48); 
+    font-size: 12px;
+    height: 13px;
+  }
+}
+
+.contact_page {
+  .error-text {
+    margin-left: 0px;
+  }
+
+  .s-textarea {
+    margin-top: 10px; 
+    margin-bottom: 10px;
+  }
+}
+
+.reset_password, .sign_in {
+  .error-text {
+    margin-left: 0px;
+  }
+
+  .update_password_fields {
+
+    label {
+      width: 160px;
+    }
+
+    input {
+      margin-left: 10px; 
+      width: 238px;
+    }
+  }
+}
+
+p.standart_paragraph {
+  font-size: 14px;
+  padding: 24px 0;
+  color: #89898E;
+}
+
+.standart_link {
+  color: #F07230;
+  font-size: 14px;
+
+}
+
+.center_alignment {
+  text-align: center;
+}
+
+.static_page {
+  
+  h3 {
+    font-size: 23px;
+    line-height: 30px;
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  p {
+    font-size: 12px;
+    margin-top: 8px; 
+    margin-bottom: 8px;
+    line-height: 22px;
+    text-indent: 0px;
+    padding-left: 5px;
+  }
+
+  a {
+    color: #F07230;
+    /*    font-size: 14px;
+        text-transform: uppercase;          */
+  }
+
+  i {
+    margin-top: 15px; 
+    margin-bottom: 15px; 
+    display: block;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  ul.limitation_list {
+    list-style-type: disc;
+    margin: 15px;
+    margin-left: -20px;
+
+    li {
+      margin-top: 8px; 
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+  }  
+}
+
+i.icon-share {
+  margin-left: -13px;
+}
+
+.sign_in {
+  .s-form {
+    margin-top: 128px;
+  }
+}
+
+.b-connections__form {
+  .up_button {
+    margin-top: 11px; 
+    padding-bottom: 0px;
+  }
+}
+
+.b-connections__feed-column {
+  width: 350px; 
+  margin-top: -30px;
+}
+
+.clear {
+  clear:both;
+}
+
+.b-company-info__logo {
+  border: 5px solid #F07230;
+  height: 60px;
+  margin-left: 20px; 
+  margin-right: 20px;
+
+  img {
+    width: 100px;
+    height: 60px;
+  }
+}
+
+.password_confirmation_block {
+  width: 658px;
+}
+
+.circle_list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.are_your_sure_modal {
+  margin: 1px;
+  width: 440px;
+
+  p {
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  div {
+    text-align: right; 
+    margin-top: 35px;
+
+    #fancyConfirm_cancel {
+      margin: 3px;
+      padding: 0px;
+      background-color: #F2731F;
+    }
+
+    #fancyConfirm_ok {
+      margin: 3px; 
+      padding: 0px; 
+      width: 177px;
+    }
+  }
+}
+
+.up_to_terms_title {
+  margin-top: -85px;
+}
+
+.move_left_terms_title {
+  .b-page-header {
+    padding-left: 0px;
+  }
+}
+
+.terms_font {
+  font-size: 14px;
+}
+
+.terms_bold {
+  font-weight: bold;
+}
+
+.terms_list_letter {
+  list-style-type: lower-alpha;
+  font-size: 14px;
+}
+
+.terms_list_numeric {
+  list-style-type: decimal;
+  font-size: 25px;
+  li {
+    margin-left: 20px;
+  }
+
+  ul, ol, p {
+    margin-left: 0px;
+  }
+}
+
+p.terms_p_move_left {
+  margin-left: 0px;
+}
+
+.mass_sending_form {
+  width: 960px;
+}
+
+.b-connections {
+  .b-connections__table.followers_block {
+    margin-top: 20px;
+  }
+
+  .b-connections__table.not_glowing_block {
+    ul.b-connections__table-labels {
+      margin-top: 10px;
+    }
+  }
+
+  .errors_block {
+    float: right;
+    margin-bottom: 20px;
+    width: 200px;
+  }
+}
+
+.b-dashboard__pitch.short_pitch { 
+    width: 680px;
+}
+
+.toggle_account {
+  z-index:1000;
+}
+
+.follow_button {
+  margin-left: 5px;
+}
+
+.follow_paginate {
+  margin-top: 20px;
+}
+.b-followers {
+  #infscr-loading {
+    margin: 0 auto;
+  }
+}
+
+p.password-strength-meter.pwdcalc {
+  margin-left: 300px;
+  margin-top: -15px;
+}
+
+.sign_in_link {
+  padding: 12px 19px 12px 19px;
+}

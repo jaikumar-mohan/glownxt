@@ -1,0 +1,11 @@
+%li.b-navigation__item{ class: active_tab?('connections') }
+  = link_to "Dashboard", connections_path, class: "b-navigation__link js-off_page_link"
+%li.b-navigation__item{ class: active_tab?('companies') }
+  = link_to "Companies", companies_path, class: "b-navigation__link js-off_page_link"
+
+%li.b-navigation__item.b-navigation__item-right.toggle_account
+  .b-navigation__item-right-link.js-navigation-toggle-account Account
+  %ul.b-navigation__sub-list
+    %li.b-navigation__sub-item= link_to 'View Your Public Page', company_url(current_user.company), class: 'b-navigation__sub-link js-off_page_link'
+    %li.b-navigation__sub-item= link_to 'Edit Company Profile', edit_company_path(current_user.company_relationship.company_id), class: 'b-navigation__sub-link js-off_page_link'
+    %li.b-navigation__sub-item= link_to 'Log out', destroy_user_session_path, method: "delete", class: 'b-navigation__sub-link'

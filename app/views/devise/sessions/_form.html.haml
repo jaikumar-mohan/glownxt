@@ -1,0 +1,10 @@
+= form_for(User.new, as: 'User', url: user_session_path, html: { class: 'b-home-form' }, remote: true) do |f|
+
+  .fields_container
+    = render 'devise/sessions/sign_in_fields'
+  .b-home-form__row.right
+    = render 'devise/sessions/sign_in_submit_block'
+
+  .b-home-form__row.right
+    Forgotten password?
+    = link_to "Reset", new_user_password_path, class: 'standart_link'

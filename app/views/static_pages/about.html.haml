@@ -1,0 +1,9 @@
+- provide(:title, 'About Us')
+
+- description = "This is the about page for #{link_to 'Glowfori', 'http://www.glowfori.com', class: 'standart_link'}".html_safe
+
+.c-content
+  = render 'm/shared/page_title', title: 'About Us', description: description
+.b-blog
+  .c-content.static_page
+    %p

@@ -1,0 +1,35 @@
+.b-home
+  .b-home__logo= link_to '', root_url, class: 'b-logo-big'
+  %h1.b-home__slogan
+    Home to the connected companies.
+    %br
+    Finding trusted quality partners the first time.
+  .b-home__auth= link_to 'Sign up Now', '#', class: 's-btn-warning'
+  .b-home__tour Take a Tour
+
+  .b-home__row
+    .b-home__form
+      .s-rounded-box
+        %h2.s-header Please enter your details
+        %form.b-home-form
+          .b-home-form__row
+            %input.b-home-form__input{type:'email', placeholder: 'email address'}
+            %span.b-home-form__hint required
+          .b-home-form__row
+            %input.b-home-form__input{type:'password', placeholder: 'password'}
+            %span.b-home-form__hint required
+          .b-home-form__row.right
+            %button.b-home-form__submit Submit
+          .b-home-form__row.right
+            = link_to 'Forgot your password?', '#', class: 'b-home-form__link'
+
+    .b-home__tags
+      .s-rounded-box
+        %h2.s-header Available Today on Glowfori
+        .s-tags
+          - random_tag_cloud @top_wanted_capabilities, %w[xxs xs s m l xl xxl] do |tag_name, css_class|
+            = link_to tag_name, '#', class: "s-tags__tag #{css_class}"
+          - random_tag_cloud @top_wanted_capabilities, %w[xxs xs s m l xl xxl] do |tag_name, css_class|
+            = link_to tag_name, '#', class: "s-tags__tag #{css_class}"
+          - random_tag_cloud @top_wanted_capabilities, %w[xxs xs s m l xl xxl] do |tag_name, css_class|
+            = link_to tag_name, '#', class: "s-tags__tag #{css_class}"

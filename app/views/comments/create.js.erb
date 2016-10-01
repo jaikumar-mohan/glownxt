@@ -1,0 +1,6 @@
+<% if @comment.persisted? %>
+  $( '#<%= dom_id(@micropost) %> .b-comments__list' ).prepend("<%= escape_javascript(render(
+    'comments/comment', comment: @comment
+  )) %>");
+  $('#<%= dom_id(@micropost) %> .js-comments-collapse-link').show();
+<% end %>

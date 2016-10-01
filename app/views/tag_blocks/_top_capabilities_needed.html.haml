@@ -1,0 +1,13 @@
+%td.b-connections__table-cell
+  %h3.b-connections__tags-title  Here are matches to what you are looking for
+  %ul.b-connections__table-labels
+    - if @top_needed_capabilities.present?
+      - @top_needed_capabilities.each do |tagname, count|
+        %li.s-label
+          = link_to companies_url(by_tags: tagname, search_by_tags_mode: :looked_tags) do
+            .s-label__text
+              = tagname
+            .s-label__value
+              = count
+    - else
+      %span No entries yet

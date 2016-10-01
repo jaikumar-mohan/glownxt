@@ -1,0 +1,9 @@
+.b-home-form__row
+  = text_field_tag "user[email]", login_previous_email_value, { class: 'b-home-form__input js-input_email', placeholder: 'email address' }
+  %span.b-home-form__hint required
+  = error_box(@errors['email']) if @errors && @errors['email'].present?
+
+.b-home-form__row
+  = text_field_tag "user[password]", nil, { class: 'b-home-form__input js-input_password', placeholder: 'password', type: 'password' }
+  %span.b-home-form__hint required
+  = error_box(@errors['password']) if @errors && @errors['password'].present?

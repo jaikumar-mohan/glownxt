@@ -1,0 +1,7 @@
+= f.label :company_certification_list, "Certifications", class: 's-single-label'
+%i.tags_block_description
+  = "if #{company.company_name} has any industry certifications, type ahead and select as many tags as you want - add new tags if nothing fits your company."
+
+.tag_autocomplete_block
+  = f.hidden_field :company_certification_list, :value => f.object.company_certification_list.join(', ')
+  %ul.tag_variants#company_certification_list

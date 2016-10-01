@@ -1,0 +1,13 @@
+- states = [['active','success','success'], ['','active','success'], ['','','active']]
+
+.b-steps{class: "b-steps__current-step-#{step}"}
+  .b-steps__content
+    .b-steps__item.b-steps__1{class: "b-steps__#{states[0][step-1]}"}
+      .b-steps__number 1
+      .b-steps__description SIGN UP
+    .b-steps__item.b-steps__2{class: "b-steps__#{states[1][step-1]}"}
+      .b-steps__number 2
+      .b-steps__description AUTHENTICATE
+    .b-steps__item.b-steps__3{class: "b-steps__#{states[2][step-1]}"}
+      .b-steps__number 3
+      .b-steps__description CREATE

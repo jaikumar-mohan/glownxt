@@ -1,0 +1,15 @@
+/*
+ *= require_self
+ *= require ./makeup/screen
+ *= require ./makeup/struct
+ *= require ./makeup/layout
+ *= require jquery.ui.core
+ *= require jquery.ui.autocomplete
+ *= require jquery.ui.theme
+ *= require jquery.tagit.css
+ *= require jquery.fileupload-ui
+ *= require tag-it-ui-overrides.css
+ *= require jquery.fancybox.css.scss
+ *= require pwdcalc
+ *= require_tree ./makeup
+ */

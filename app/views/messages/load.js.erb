@@ -1,0 +1,9 @@
+<% @companies.each do |company| %>
+  $('tbody').append("<%= escape_javascript(render(
+	  'messages/table_item', 
+	  company: company
+  )) %>");
+<% end %>
+
+Messages.set_next_pagination_step("<%= @companies.total_pages > @companies.current_page ? @companies.current_page + 1 : 0 %>");
+Messages.refreshNav();

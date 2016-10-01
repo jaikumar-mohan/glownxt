@@ -1,0 +1,126 @@
+.b-sidebar-menu {
+  .b-sidebar-menu__link {
+    padding-left: 10px;
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 39px;
+    width: 175px;
+    padding-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &.current {
+      background: asset_url('m/sprite.png') right -351px;
+      color: #fff;
+    }
+  }
+
+  .b-sidebar-menu__item {
+    border-bottom: 1px solid #d7d7d7;
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .b-sidebar-menu {
+      .b-sidebar-menu__link {
+        color: #898989;
+        font-size: 12px;
+        padding-left: 15px;
+        line-height: 39px;
+        &.current {
+          background: asset_url('m/sprite.png') right -351px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.b-company-logo {
+  overflow: hidden;
+  margin-bottom: 15px;
+  .b-company-logo__image {
+    border: 5px solid #f07230;
+    width: 137px;
+    height: 69px;
+    float: left;
+
+    img {
+      width: 137px;
+      height: 69px;
+    }
+  }
+
+  .b-company-logo__tools {
+    margin-left: 160px;
+  }
+
+  .b-company-logo__text {
+    color: #f07230;
+    font-style: italic;
+    font-size: 13px;
+    padding: 7px 0 0;
+    height: 67px;
+  }
+
+  .s-btn {
+    width: 130px;
+  }
+}
+
+.b-profile {
+  .b-page-header {
+    padding-left: 220px;
+    margin-bottom: 30px;
+  }
+
+  .b-profile__sidebar {
+    float: left;
+    width: 170px;
+  }
+
+  .b-profile__content {
+    margin-left: 220px;
+    border: 1px solid #d7d7d7;
+    padding: 20px 60px 60px;
+    margin-bottom: 50px;
+    position: relative;
+    display: none;
+    &.current {
+      display: block;
+    }
+  }
+
+  .b-profile__title {
+    font-size: 18px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 28px;
+  }
+
+  .b-profile__subtitle {
+    font-size: 15px;
+    color: #898989;
+    text-transform: uppercase;
+    line-height: 28px;
+  }
+
+  .b-profile__submit {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+  }
+
+  .s-input {
+    width: 250px;
+  }
+
+  .s-textarea {
+    width: 260px;
+  }
+}

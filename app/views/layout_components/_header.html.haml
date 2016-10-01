@@ -1,0 +1,11 @@
+.b-header
+  .c-content
+    .b-header__logo
+      = link_to '', root_url, class: 'b-logo js-off_page_link' if @active_tab != 'home'
+    .b-header__navigation
+      %nav.b-navigation
+        %ul.b-navigation__list
+          - if signed_in?
+            = render 'layout_components/logged_in_header_menu'
+          - else
+            = render 'layout_components/not_logged_in_header_menu'

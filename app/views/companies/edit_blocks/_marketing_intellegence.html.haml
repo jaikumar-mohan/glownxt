@@ -1,0 +1,17 @@
+.b-profile__content#company_marketing{ class: 'current' }
+  .b-profile__title Market Data
+  / .b-profile__subtitle Marketing Intelligence
+
+  = form_for(current_user.company, url: profile_path(current_user.company), method: :patch, html: { class: 'b-form' }, remote: true) do |f|
+    = hidden_field_tag :from, :marketing
+
+    - Company::TAGS_DATA.each do | tags_block_name, placeholder |
+      .b-tags_block
+        = f.label "#{tags_block_name}_list", placeholder, class: 's-single-label'
+        = hidden_field_tag "#{tags_block_name}_default_list", f.object.send("#{tags_block_name}_list").join(', ')
+        .tag_autocomplete_block
+          = f.hidden_field "#{tags_block_name}_list", value: f.object.send("#{tags_block_name}_list").join(', '), class: 'hidden_tags_input'
+          .js-edit_tags_container
+            = render 'tag_blocks/edit_item', tags_block_name: tags_block_name
+
+    = render 'companies/edit_blocks/submit_block'

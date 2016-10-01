@@ -1,0 +1,31 @@
+= form_for @user, url: email_validation_path(params[:id]), html: { class: 's-form b-auth' }, remote: true do |f| 
+
+  .b-auth__title
+    You are the administrator for 
+    = "#{@user.company.company_name}."
+    %br
+    Are your details correct?
+
+  .s-form__group
+    .fields_container
+      = render 'users/sign_up/step_2_fields'
+
+  = render 'users/sign_up/submit_block_step_2_1'
+
+  .b-auth__text
+    You can always update these details later
+    %br
+    in your membership profile.    
+
+= form_for @user, url: email_validation_path(params[:id]), html: { class: 's-form b-auth' }, remote: true do |f|     
+
+  .s-form__arrow-down
+  = f.fields_for :company do |c| 
+    .s-form__group
+      .s-textarea
+        = c.text_area :company_profile, rows: 4, :placeholder => "Your Companies elevator pitch in 250 characters or less ..."
+   
+    = render 'email_validation/tags_block', user: @user, c: c 
+
+  = render 'users/sign_up/submit_block_step_2_2'
+

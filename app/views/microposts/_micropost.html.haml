@@ -1,0 +1,27 @@
+- comments = micropost.children
+
+%li.b-comments__item.b-comment.post{ id: dom_id(micropost) }
+  -# = link_to gravatar_for(micropost.user, size: 50), company_path(micropost.user.company), class: 'b-comment__avatar'
+  .b-comment__body
+    = link_to micropost.user.company.company_name, company_path(micropost.user.company), class: 'b-comment__link'
+    - if micropost.to.present? && micropost.user != micropost.to
+      %i.icon-share
+        &#8594;
+      = link_to micropost.to.company.company_name, company_path(micropost.to.company), class: 'b-comment__link'
+    .b-comment__text
+      = h(micropost.content)
+    .b-comment__tools
+      - if signed_in?
+        = link_to 'Comment', '#', class: 'b-comment__link js-comments-create-link pull-left'
+        - if micropost.user_id == current_user.id
+          = form_for(micropost, url: company_micropost_path(micropost.user.company, micropost), html: {method: :delete, class: 'remove_micropost_form pull-left' }, remote: true) do |f|
+            = link_to "Delete", '#', class: "b-comment__link js-comments-destroy-link pull-left"
+      %span.b-comment__date
+        = h(distance_of_time_in_words(micropost.updated_at, Time.zone.now))
+      %span.b-comment__collapse
+        - hide_show_link = comments.present? ? ' ' : 'hidden' 
+        = link_to 'collapse', '#', class: "pull-right js-comments-collapse-link #{hide_show_link}"
+
+  %ul.b-comments__list.comment
+    = render partial: 'comments/comment', collection: comments, as: :comment
+  = render 'comments/form', micropost: micropost

@@ -1,0 +1,23 @@
+- provide(:title, "Edit Company Profile")
+
+.b-profile.c-content.edit_company_profile
+  = render 'm/shared/page_title', title: 'Edit Company Profile'
+  .b-profile__container
+    = render 'companies/edit_blocks/navigation'
+    = render 'companies/edit_blocks/user_data'
+    = render 'companies/edit_blocks/base_data'
+    = render 'companies/edit_blocks/marketing_intellegence'
+    = render 'companies/edit_blocks/services'
+
+= render 'companies/fileupload_tmpl'
+.hidden.are_your_sure_modal_container
+  = render 'companies/edit_blocks/are_your_sure_modal'
+
+= content_for(:javascript_code) do
+  CompanyLogoUpload.init();
+  CompanyTags.init();
+  CountriesAndStatesAutcomplete.init();
+  FormChange.init();
+  FormChange.head_foot_links();
+  ProfilePage.init();
+  PasswordStrength.init();

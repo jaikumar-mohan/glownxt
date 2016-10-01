@@ -1,0 +1,8 @@
+.s-table__content.scroll-pane
+  %table
+    %tbody
+      - if @companies.blank?
+        %p.s-table.company_table
+          No companies found.
+      - @companies.each do |company|
+        = render 'messages/table_item', company: company

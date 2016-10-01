@@ -1,0 +1,19 @@
+<li>
+  <%= h(gravatar_for user, size: 40) %>
+
+  <span class="handler">
+  Users name: <%= h(user.full_name) %>
+    <% if user.company_relationship.present? %>
+  | Company: <%= link_to user.company.company_name, company_path(user.company) %>
+  <% end %>
+    Nickname: <%= link_to user.handle, user %>
+    <% if user.microposts.present? %>
+       | Glows (<%= user.microposts.count %>)
+    <% end %>
+	</span>
+
+  <% if current_user.admin? && !current_user?(user) %>
+      | <%= link_to "delete", user, method: :delete,
+                    data: {confirm: "You sure?"} %>
+  <% end %>
+</li>

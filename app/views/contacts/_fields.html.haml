@@ -1,0 +1,10 @@
+- %w{ first_name last_name email company }.each do |field_name|
+  %p
+    %span.s-inline-input{ class: "required" }
+      = label_tag "contact[#{field_name}]", custom_label_text(field_name), class: ''
+      = text_field_tag "contact[#{field_name}]", @contact.send(field_name), { class: "js-input_#{field_name}" }
+    = universal_error_box(field_name)
+
+.s-textarea
+  = text_area_tag "contact[body]", nil, { placeholder: 'Comments', rows: 4 }
+= universal_error_box('body')

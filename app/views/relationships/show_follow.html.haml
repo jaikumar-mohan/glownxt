@@ -1,0 +1,12 @@
+.c-content
+  = render 'm/shared/page_title', title: @title
+  - if @users.any?
+    .s-rounded-box.b-followers
+      %ul#b-feeds__container
+        = render 'relationships/follow_users', users: @users
+    - if @users.total_pages > @users.current_page
+      %nav#page-nav
+        = link_to '', load_follows_user_url(current_user, page: @users.current_page + 1, title: @title)
+
+= content_for :javascript_code do
+  MicropostLength.pagination();

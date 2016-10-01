@@ -1,0 +1,43 @@
+.b-feeds__container
+  / ====== A GLOW WITH COMMENT =======
+  .b-feed__item.clearfix
+    = image_tag 'sample/ava.png', class: 'b-feed__avatar'
+    .b-feed__comment
+      %a.b-feed__author{href: '#'} Nick Mayburg
+      %p.b-feed__comment-text
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+      .b-feed__actions
+        %a{href: '#'} Comment
+        %a{href: '#'} Delete
+        %span.b-feed__timestamp 2 days ago
+    .b-feed__subitem.clearfix
+      = image_tag 'sample/ava.png', class: 'b-feed__avatar'
+      .b-feed__comment
+        %a.b-feed__author{href: '#'} Nick Mayburg
+        %p.b-feed__comment-text
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+        .b-feed__actions
+          %span.b-feed__timestamp 2 days ago
+    .b-feed__add-comment
+      %input.fullwidth{type: 'text', placeholder: 'Write a comment...'}
+  / ====== A GLOW WITHOUT COMMENT =======
+  .b-feed__item.clearfix
+    = image_tag 'sample/ava.png', class: 'b-feed__avatar'
+    .b-feed__comment
+      %a.b-feed__author{href: '#'} Nick Mayburg
+      %p.b-feed__comment-text
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+      .b-feed__actions
+        %span.b-feed__timestamp 2 days ago
+    .b-feed__add-comment
+      %input.fullwidth{type: 'text', placeholder: 'Write a comment...'}
+
+  - 6.times do
+    .b-feed__item.clearfix
+      = image_tag 'sample/ava.png', class: 'b-feed__avatar'
+      .b-feed__comment
+        %a.b-feed__author{href: '#'} Nick Mayburg
+        %p.b-feed__comment-text
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+        .b-feed__actions
+          %span.b-feed__timestamp 2 days ago

@@ -1,0 +1,2 @@
+= form_for Micropost.new, url: micropost_comments_path(micropost), remote: true, method: :post, html: { class: 'b-comments__form js-comments-form hidden' } do |f|
+  = f.text_field :content, class: 's-input', placeholder: "Write a comment..."

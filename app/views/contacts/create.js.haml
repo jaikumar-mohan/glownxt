@@ -1,0 +1,8 @@
+- if @errors.present?
+  ContactPage.hide_spinner();
+  $('.contact_page .fields_container').html("#{escape_javascript(render('contacts/fields'))}");
+- else
+  ContactPage.show_success_message();
+
+- if (@focus_field.present?)
+  FocusInput.init("#{@focus_field[0]}");

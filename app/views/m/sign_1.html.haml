@@ -1,0 +1,20 @@
+.c-content= render 'm/shared/page_title', title: 'Sign Up'
+= render 'm/shared/steps', step: 1
+.c-content
+  %form.s-form
+    .s-form__group
+      %p.s-form__hint.right * required
+      %p= render 'm/shared/inline_input', id: 'a', label: 'First Name', required: true
+      %p= render 'm/shared/inline_input', id: 'b', label: 'Last Name', required: true
+      %p= render 'm/shared/inline_input', id: 'c', label: 'Email Address', type: 'email', required: true
+    .s-form__group
+      %p= render 'm/shared/inline_input', id: 'd', label: 'Company Name'
+      %p= render 'm/shared/inline_input', id: 'd', label: 'Password', type: 'password'
+      %p= render 'm/shared/inline_input', id: 'd', label: 'Verify Password', type: 'password'
+    %p
+      %label.s-inline-checkbox
+        %input{type: 'checkbox'}
+        %span.s-inline-checkbox__text I accept the terms and conditions of Glowfori membership.
+
+    %p.s-form__footer
+      %button.s-btn Submit

@@ -1,0 +1,36 @@
+.c-content.search_company_block
+  = form_tag search_messages_url, remote: true, method: :get, class: 's-form search_by_companies' do
+    = hidden_field_tag :next_page, @companies.total_pages > @companies.current_page ? @companies.current_page + 1 : 0
+    = hidden_field_tag :search_by_tags_mode, params[:search_by_tags_mode].present? ? params[:search_by_tags_mode] : 'offer_tags'
+   
+    .pull-left.left_side
+      .s-form__group
+        = label_tag :by_tags, 'By Tags'
+        .s-inline-input.tag_autocomplete_block
+          = hidden_field_tag :by_tags, params[:by_tags].to_s.split('_').join(',')
+          %ul.tag_variants#by_tags_block
+
+    .pull-left.right_side  
+      .s-form__group
+        = label_tag :by_name, 'By Name'
+        .s-inline-input.company_by_name_field
+          = text_field_tag :by_name, nil, placeholder: 'apple'
+        
+        .pull-left
+          = label_tag :by_country, 'By Country'
+          .s-inline-input.small
+            = text_field_tag :by_country, nil, class: 'hidden', id: "company_country_id"
+            = text_field_tag :country_id, nil, placeholder: 'Ex: United States', autocomplete: :off
+
+        .pull-left
+          = label_tag :by_state_id, 'By State'
+          .s-inline-input.small
+            = text_field_tag :by_state, nil, class: 'hidden', id: "company_state_id"
+            = text_field_tag :state_id, nil, placeholder: 'Ex: Nebraska', autocomplete: :off
+        
+        .pull-left
+          = label_tag :by_city, 'By City'
+          .s-inline-input.small
+            = text_field_tag :by_city, nil, placeholder: 'Ex:New York', autocomplete: :off   
+
+        = submit_tag 'Search', class: 's-btn pull-right'

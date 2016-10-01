@@ -1,0 +1,6 @@
+- if @errors.present?
+  ResetPassword.hide_spinner();
+  $('.fields_container').html("#{escape_javascript(render('devise/passwords/field'))}");
+  FocusInput.init('email');
+- else
+  ResetPassword.show_success_message();

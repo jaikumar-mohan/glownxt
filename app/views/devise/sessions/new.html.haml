@@ -1,0 +1,25 @@
+- provide(:title, "Sign in") 
+
+- if flash[:notice].present?
+  - description = "#{flash[:notice]}"
+- else
+  - description = ""
+
+.c-content.sign_in
+  = render 'm/shared/page_title', title: '', description: description
+  = form_for(resource, as: resource_name, url: user_session_path, html: { class: 's-form' }, remote: true) do |f|
+    = hidden_field_tag :from_sign_in_page, true
+
+    .fields_container
+      = render 'devise/sessions/sign_in_fields'
+    = render 'devise/sessions/sign_in_submit_block'
+
+  %p.standart_paragraph.center_alignment
+    New user? 
+    = link_to "Sign up now", new_user_registration_path, class: 'standart_link' |
+    Forgotten password? 
+    = link_to "Reset", new_user_password_path, class: 'standart_link'
+
+= content_for(:javascript_code) do
+  HomePage.init();
+  FocusInput.init("#{login_field_with_focus}");

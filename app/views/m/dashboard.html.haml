@@ -1,0 +1,100 @@
+.c-content
+  = render 'm/shared/company_info', name: 'ACME', title: 'Welcome', btn: true
+  .b-dashboard
+    .b-dashboard__left-column
+      .b-dashboard__row
+        %p
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+          diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+          aliquam erat volutpat. Ut wisi enim ad minim veniam
+
+      .b-dashboard__row
+        %h2.s-header Mission Statement / <br>Products and Services
+        %p
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+          diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+          aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+          exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+          commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+          vulputate velit esse molestie consequat, vel illum dolore eu
+          feugiat nulla facilisis at vero eros et accumsan et iusto odio
+          dignissim qui blandit praesent luptatum zzril delenit augue duis
+          dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis
+          eleifend option congue. doming id quod mazim placerat facer possim
+          assum. Typi non habent claritatem insitam
+
+      .b-dashboard__row
+        %h2.s-header-warning Top Capabilities we offer
+        .s-tags
+          - random_tag_cloud @top_wanted_capabilities, %w[xxs xs s m l xl xxl] do |tag_name, css_class|
+            = link_to tag_name, '#', class: "s-tags__tag #{css_class}"
+
+      .b-dashboard__row
+        %h2.s-header-warning Top Certifications
+        .s-tags
+          - random_tag_cloud @top_wanted_capabilities, %w[xxs xs s m l xl xxl] do |tag_name, css_class|
+            = link_to tag_name, '#', class: "s-tags__tag #{css_class}"
+
+    .b-dashboard__right-column
+      .b-dashboard__row= render 'm/shared/post_form', placeholder: 'Leave a private Glow message for ACME ltd.', rows: 7
+      .b-dashboard__row
+        %h2.s-header Glows Feed
+        .s-rounded-box
+          .b-comments
+            %ul.b-comments__list
+              %li.b-comments__item.b-comment
+                = link_to "Nick Mayburg", "#", class: 'b-comment__link'
+                .b-comment__text
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+                .b-comment__tools
+                  = link_to "Comment", "#", class: "b-comment__link js-comments-create-link"
+                  = link_to "Delete", "#", class: "b-comment__link js-comments-destroy-link"
+                  %span.b-comment__date 2 days ago
+
+                %ul.b-comments__list
+                  %li.b-comments__item.b-comment
+                    = link_to "Nick Mayburg", "#", class: 'b-comment__link'
+                    .b-comment__text
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                    .b-comment__tools
+                      = link_to "Delete", "#", class: "b-comment__link js-comments-destroy-link"
+                      %span.b-comment__date 2 days ago
+
+                  %li.b-comments__item.b-comment
+                    = link_to "Nick Mayburg", "#", class: 'b-comment__link'
+                    .b-comment__text
+                      nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+                    .b-comment__tools
+                      %span.b-comment__date 2 days ago
+
+                %form.b-comments__form.js-comments-form.hidden
+                  %input.s-input{type:"text", placeholder: "Write a comment..."}
+
+              %li.b-comments__item.b-comment
+                = link_to "Nick Mayburg", "#", class: 'b-comment__link'
+                .b-comment__text
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+                .b-comment__tools
+                  = link_to "Comment", "#", class: "b-comment__link js-comments-create-link"
+                  = link_to "Delete", "#", class: "b-comment__link js-comments-destroy-link"
+                  %span.b-comment__date 2 days ago
+
+                %form.b-comments__form.js-comments-form
+                  %input.s-input{type:"text", placeholder: "Write a comment..."}
+
+              %li.b-comments__item.b-comment
+                = link_to "Nick Mayburg", "#", class: 'b-comment__link'
+                .b-comment__text
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+                .b-comment__tools
+                  %span.b-comment__date 2 days ago
+
+
+

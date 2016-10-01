@@ -1,0 +1,20 @@
+- fields = User::CommonFormFields
+
+.s-form__group
+  %p.s-form__hint.right * required
+  - fields.each do |field_name|
+    %p
+    - if field_name != 'password'
+      = render 'users/sign_up/field', field_name: field_name
+    - else
+      = render 'users/sign_up/password_field'
+
+%p
+  %label.s-inline-checkbox
+    = check_box_tag 'user[tos]', 1, params[:user].try(:[], :tos) == '1'
+    = label_tag 'user[tos]', ''
+    %span.s-inline-checkbox__text
+      = link_to 'I accept the terms and conditions of Glowfori membership', terms_path, 'target' => '_blank'
+    - if @errors && @errors['tos'].present?
+      .error-text
+        = @errors['tos']

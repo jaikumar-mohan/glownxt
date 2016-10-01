@@ -1,0 +1,13 @@
+- provide(:title, 'Contact Us')
+
+.c-content.contact_page
+  = render 'm/shared/page_title', title: 'Contact Us', description: 'If you have any questions, dont hesitate, let us know whats on your mind.'
+
+  = form_for @contact, html: { class: 's-form' }, remote: true do |f|
+    .fields_container
+      = render 'contacts/fields'
+    = render 'contacts/submit_block'
+    
+= content_for(:javascript_code) do
+  FocusInput.init("#{contact_field_with_focus}");
+  ContactPage.init();

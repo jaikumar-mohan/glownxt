@@ -1,0 +1,42 @@
+.c-content
+  .b-connections
+    .b-connections__columns
+      .b-connections__left-column
+        = image_tag @company.logo.url(:medium), class: 'b-sidebar-logo'
+        .b-connections__form= render 'microposts/form'
+        %h2.s-header-left Glows Feed
+        .s-rounded-box-compact
+          .b-comments
+            = render 'microposts/microposts_block', microposts: @microposts, checkbox1: @checkbox1, checkbox2: @checkbox2
+
+      .b-connections__right-column
+        .b-connections__activity
+          %br/
+          %h2.s-header-left Current Activity
+          %table.b-connections__table
+            %tr.b-connections__table-row
+              %td.b-connections__table-cell
+              = render 'connections/found_companies_blocks'
+
+
+        %h2.s-header-left What's glowing
+        %table.b-connections__table
+          %tr.b-connections__table-row
+            = render 'tag_blocks/top_capabilities_wanted'
+            = render 'tag_blocks/top_capabilities_needed'
+          = render 'tag_blocks/actionable_marketing_intelligence'
+
+
+        %br/
+        %br/
+        %h2.s-header-left What's NOT glowing
+        = render 'tag_blocks/not_glowing_block'
+
+
+= content_for :javascript_code do
+  Glows.init();
+  GlowComments.init();
+  MicropostLength.init();
+  MicropostLength.pagination();
+  Messages.loading_spinner_init();
+  ClickCheckbox.followed();

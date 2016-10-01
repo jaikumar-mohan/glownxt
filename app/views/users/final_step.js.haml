@@ -1,0 +1,4 @@
+- if @redirect_url.present?
+  window.location.href = "#{@redirect_url}";
+- else
+  SignUpStep3.hide_spinner();

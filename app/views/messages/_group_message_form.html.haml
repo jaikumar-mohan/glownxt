@@ -1,0 +1,8 @@
+= form_for Micropost.new, url: mass_sending_messages_url, remote: true, html: { class: 'b-post-form mass_sending_form' } do |f|
+  = hidden_field_tag :recepients
+  .s-textarea
+    = f.text_area :content, class: 'micropost_content', placeholder: "Post a Glow to the companies you would like to partner with (max 5)", rows: "3"
+  .b-post-form__tools
+    .b-post-form__hint.countdown.share_glow_count 140 characters remaining
+    = f.submit 'POST', class: 's-btn'
+    = image_tag 'spinner.gif', class: 'loading_spinner pull-right' 

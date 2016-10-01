@@ -1,0 +1,16 @@
+.c-content
+  = render 'm/shared/page_title', title: 'Contact Us', description: 'If you have any questions, dont hesitate, let us know whats on your mind.'
+  %form.s-form
+    %p= render 'm/shared/inline_input', id: 'a', label: 'First Name'
+    %p= render 'm/shared/inline_input', id: 'b', label: 'Last Name'
+    %p= render 'm/shared/inline_input', id: 'c', label: 'Email Address', type: 'email'
+    %p= render 'm/shared/inline_input', id: 'd', label: 'Company'
+    %p
+      .s-textarea
+        %textarea{placeholder: 'Comments', rows: 4}
+
+    %p.s-form__footer
+      %button.s-btn Submit
+
+
+

@@ -1,0 +1,371 @@
+@import "compass";
+@import "compass/css3";
+@import "compass/utilities";
+
+.hidden {
+  display: none;
+}
+
+.c-content {
+  margin: 0 auto;
+  padding: 0 10px 10px 0;
+  width: 960px;
+}
+
+[class^="s-btn"],
+[class*=" s-btn"] {
+  background: #ccc;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: normal;
+  height: 37px;
+  line-height: 37px;
+  margin: 0;
+  min-width: 90px;
+  opacity: 0.9;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include border-radius(4px);
+
+  &:hover {
+    opacity: 1;
+    background: #f07230;
+  }
+}
+
+.s-btn-warning {
+  background: #f07230;
+}
+
+.s-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  .s-dropdown__toggler {
+    background: #ccc;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 37px;
+    line-height: 37px;
+    margin: 0;
+    min-width: 50px;
+    opacity: 0.9;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include border-radius(4px);
+  }
+
+  .s-dropdown__toggler-icon {
+    background: url(/assets/m/dropdown-arrow.png) no-repeat center;
+    display: inline-block;
+    width: 23px;
+    height: 36px;
+    margin-top: 1px;
+  }
+
+  .s-dropdown__list {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: #898989;
+    padding: 7px 0;
+    @include border-radius(4px);
+    z-index: 1;
+  }
+
+  .s-dropdown__item {
+    padding: 7px 18px;
+    display: block;
+    text-decoration: none;
+    font-size: 13px;
+    color: #fff;
+  }
+
+  .s-dropdown__list-divider {
+    border-top: 1px solid #fff;
+    margin: 7px 0;
+  }
+
+  &:hover {
+    .s-dropdown__toggler {
+      background: #898989;
+    }
+
+    .s-dropdown__list {
+      display: block;
+    }
+  }
+}
+
+.s-textarea {
+  border: 1px solid #d7d7d7;
+  padding: 5px;
+  @include border-radius(4px);
+  @include box-shadow(inset 1px 1px 2px rgba(0,0,0,0.3));
+  textarea {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    resize: none;
+    overflow: auto;
+    font-size: 13px;
+    line-height: 20px;
+    outline: none;
+  }
+}
+
+.s-input {
+  background: none;
+  border: 1px solid #d7d7d7;
+  padding: 0 5px;
+  line-height: 30px;
+  height: 30px;
+  font-size: 13px;
+  @include border-radius(4px);
+  @include box-shadow(inset 1px 1px 2px rgba(0,0,0,0.3));
+}
+
+[class^="s-rounded-box"],
+[class*=" s-rounded-box"] {
+  border: 1px solid #ddd;
+  display: block;
+  margin: 10px 0;
+  padding: 20px 30px;
+  padding-bottom: 40px;
+  @include border-radius(10px);
+}
+
+.s-rounded-box-compact {
+  padding: 15px 20px;
+}
+
+[class^="s-header"],
+[class*=" s-header"] {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+[class^="s-header-right"],
+[class*=" s-header-right"] {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+[class^="s-header-left"],
+[class*=" s-header-left"] {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+
+.s-header-warning {
+  color: #f07230;
+}
+
+.s-header-right-warning {
+  color: #f07230;
+}
+
+.s-header-left-warning {
+  color: #f07230;
+}
+
+.s-label {
+  display: inline-block;
+  max-width: 100%;
+  background: #464646;
+  position: relative;
+  padding: 0 20px;
+  box-sizing: border-box;
+  line-height: 21px;
+  margin: 2px;
+  @include border-radius(30px);
+
+  .s-label__text {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    color: #f07230;
+  }
+
+  .s-label__value {
+    background: #636363;
+    white-space: nowrap;
+    position: absolute;
+    right: 8px;
+    top: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    padding: 0 10px;
+    line-height: 17px;
+    @include border-radius(30px);
+  }
+}
+
+.s-tags {
+  margin: 8px 0;
+  .s-tags__tag {
+    color: #000;
+    text-decoration: none;
+    margin: 0 3px;
+    line-height: 23px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.xxs {
+      font-size: 8px;
+    }
+    &.xs {
+      font-size: 10px;
+    }
+    &.s {
+      font-size: 12px;
+    }
+    &.m {
+      font-size: 14px;
+    }
+    &.l {
+      font-size: 16px;
+    }
+    &.xl {
+      font-size: 18px;
+    }
+    &.xxl {
+      font-size: 20px;
+    }
+  }
+}
+
+.s-form {
+  width: 445px;
+  margin: 0 auto;
+
+  .s-form__footer {
+    margin: 40px 0 40px;
+    text-align: center;
+  }
+
+  .s-form__group {
+    margin-bottom: 20px;
+  }
+
+  .s-form__hint {
+    font-size: 13px;
+    color: #f07230;
+
+    &.right {
+      text-align: right;
+      padding-right: 15px;
+    }
+  }
+
+  .s-form__arrow-down {
+    height: 170px;
+    background: asset_url('m/arrow-down.png') no-repeat center;
+  }
+
+  .s-form__btn {
+    text-align: center;
+  }
+}
+
+.s-inline-input {
+  border: 1px solid #d7d7d7;
+  display: block;
+  margin: 9px 0;
+  padding: 3px 25px 3px 170px;
+  position: relative;
+  @include border-radius(3px);
+  @include box-shadow(inset 1px 1px 2px rgba(0,0,0,0.3));
+
+  &.required {
+    &:after {
+      content: "*";
+      top: 6px;
+      position: absolute;
+      right: 10px;
+      color: #f07230;
+      font-size: 15px;
+    }
+  }
+
+  label {
+    color: #252525;
+    font-size: 13px;
+    height: 23px;
+    left: 10px;
+    line-height: 23px;
+    overflow: hidden;
+    position: absolute;
+    text-align: right;
+    text-overflow: ellipsis;
+/*    top: 0; -- seems to place label on top */
+    width: 130px;
+    white-space: nowrap;
+  }
+
+  input {
+    font-size: 13px;
+    color: #252525;
+    border: none;
+    background: transparent;
+    width: 100%;
+  }
+}
+
+.s-inline-checkbox {
+  color: #f07230;
+  font-size: 13px;
+  line-height: 20px;
+
+  input[type=checkbox] {
+    vertical-align: middle;
+    margin: 0 5px 0 7px;
+  }
+
+  .s-inline-checkbox__text {
+    vertical-align: middle;
+
+    a {
+      text-decoration: none;
+      color: #F07230;
+    }
+  }
+}
+
+.s-single-label {
+  display: block;
+  margin: 15px 0px 10px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  color: #898989;
+}

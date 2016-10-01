@@ -1,0 +1,39 @@
+- provide(:title, 'Welcome')
+- content_for :page_heading do
+  .company-welcome
+    Welcome
+    %span ACME
+%br/
+.row
+  .container.b-company-line
+
+.row
+  .span4
+    .b-left-side-text
+      %p
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam
+      %h3
+        Mission Statement / Products and Services
+      %p
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis
+    .b-tags
+      %h3.c-blue
+        Top Capabilities we offer
+      .tags
+        - 10.times do
+          - css_class = ['small', 'medium', 'large'].sample
+          %a{href: '#', class: "#{css_class}"}
+            = ['software', 'technology', 'twitter', 'tips', 'tools'].sample
+
+  .span8
+    .b-message-textbox.clearfix
+      %form.new_micropost.s-ta-single
+        .field
+          %textarea#micropost_content.fullwidth{:cols => "40", :name => "micropost[content]", :placeholder => "Leave a private Glow message for ACME ltd.", :rows => "8"}
+        .button-container.pull-right
+          %span.countdown 140 characters remaining
+          %input.btn.btn-primary{:name => "commit", :type => "submit", :value => "Post"}
+
+    .b-feed
+      %h3 Glows feed
+      = render 'glows_feed'

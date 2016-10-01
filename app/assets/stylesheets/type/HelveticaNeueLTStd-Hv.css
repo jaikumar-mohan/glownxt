@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Hv';
+    src: font_url('HelveticaNeueLTStd-Hv-autohinted.eot');
+    src: font_url('HelveticaNeueLTStd-Hv-autohinted.eot?#iefix') format('embedded-opentype'),
+         font_url('HelveticaNeueLTStd-Hv.woff') format('woff'),
+         font_url('HelveticaNeueLTStd-Hv-autohinted.ttf') format('truetype'),
+         font_url('HelveticaNeueLTStd-Hv.svg#dejavu_sansbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

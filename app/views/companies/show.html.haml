@@ -1,0 +1,47 @@
+- provide(:title, @company.company_name)
+
+.c-content
+  .b-dashboard
+    .b-dashboard__header
+      .pull-right
+        = render 'relationships/follow_block', company: @company
+      = image_tag @company.logo.url(:medium), class: 'b-sidebar-logo'
+      .b-dashboard__pitch{ class: - @company.id == current_user.company.id ? '' : 'short_pitch' }
+        = @company.company_profile
+        %br
+        = link_to 'Company website', "#{@company.company_website}", class: 'b-dashboard__pitch-link', target: :blank
+    .b-dashboard__left-column
+
+      = render 'companies/dashboard_blocks/missing_statement_products_and_services_offered'
+
+      .b-dashboard__row
+        %h2.s-header-left Products & Services
+        %p Products & Services Products & Services Products & Services Products & Services Products & Services Products & Services
+
+      = render 'tag_blocks/top_capabilities_we_offering' if @top_wanted_capabilities.present?
+      = render 'tag_blocks/top_certifications' if @top_certifications.present?     
+
+    .b-dashboard__right-column
+      - unless @company.user == current_user
+        .b-dashboard__row
+          = render 'messages/form'
+      .b-dashboard__row
+        %h2.s-header-left Glows Feed
+        .s-rounded-box
+          .b-comments
+            %ul.b-comments__list#b-feeds__container
+              - if @microposts.present?
+                = render partial: 'microposts/micropost', collection: @microposts
+                - if @microposts.total_pages > @microposts.current_page
+                  %nav#page-nav
+                    = link_to '', load_company_microposts_url(@company, page: @microposts.current_page + 1)
+              - else
+                %span.no_glows_yet
+                  Welcome, add a glow and follow others and see their glows here.
+
+= content_for :javascript_code do
+  Glows.init();
+  GlowComments.init();
+  MicropostLength.init();
+  MicropostLength.pagination();
+  Messages.loading_spinner_init();

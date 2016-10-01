@@ -1,0 +1,12 @@
+- provide(:title, "Edit Password") 
+
+.c-content.reset_password
+  = render 'm/shared/page_title', title: 'Change your password', description: ''
+  = form_for(resource, :as => resource_name, url: user_password_path(reset_password_token: params[:reset_password_token]), method: :put, html: { class: 's-form' }, remote: true) do |f|
+    .fields_container.update_password_fields
+      = render 'devise/passwords/edit_fields'
+    = render 'devise/passwords/submit_block', title: 'Update'
+
+= content_for(:javascript_code) do
+  ResetPassword.init();
+  PasswordStrength.init();

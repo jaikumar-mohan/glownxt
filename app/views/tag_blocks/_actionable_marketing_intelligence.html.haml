@@ -1,0 +1,40 @@
+%tr.b-connections__table-row
+  %td.b-connections__table-cell
+    %ul.b-actionable-intel
+      - if @companies_looking_for_capabilities_you_offer.present?
+        %li.b-actionable-intel-item
+          = link_to @companies_looking_for_capabilities_you_offer, companies_url(by_tags: @company.capabilities_offered_list.join(','), search_by_tags_mode: :looked_tags), class: 'b-actionable-intel__link'
+          .b-actionable-intel__body
+            Companies are currently looking for capabilities your company offers
+
+      - if @most_sought_capability_tou_offer.present?      
+        %li.b-actionable-intel-item
+          = link_to @most_sought_capability_tou_offer, companies_url(by_tags: @most_sought_capability_tou_offer, search_by_tags_mode: :looked_tags), class: 'b-actionable-intel__link'
+          .b-actionable-intel__body
+            Is the most sought after capability that matches your offering
+
+      - if @companies_looking_for_capabilities_you_offer_in_same_city.present?      
+        %li.b-actionable-intel-item
+          = link_to @companies_looking_for_capabilities_you_offer_in_same_city, companies_url(by_tags: @company.capabilities_offered_list.join(','), search_by_tags_mode: :looked_tags, by_state: @company.primary_address.state_id, by_city: @company.primary_address.city), class: 'b-actionable-intel__link'
+          .b-actionable-intel__body
+            Of the companies looking for capabilities you offer are in the same city as you are in
+
+  %td.b-connections__table-cell
+    %ul.b-actionable-intel
+      - if @companies_offer_capabilities_you_looking_for.present?
+        %li.b-actionable-intel-item
+          = link_to @companies_offer_capabilities_you_looking_for, companies_url(by_tags: @company.capabilities_lookedfor_list.join(','), search_by_tags_mode: :offer_tags), class: 'b-actionable-intel__link'
+          .b-actionable-intel__body
+            Companies offer capabilities your company is looking for
+
+      - if @most_offered_capability_that_you_looking_for.present?    
+        %li.b-actionable-intel-item
+          = link_to @most_offered_capability_that_you_looking_for, companies_url(by_tags: @most_offered_capability_that_you_looking_for, search_by_tags_mode: :offer_tags), class: 'b-actionable-intel__link'
+          .b-actionable-intel__body
+            Is the most offered capability that matches your needs
+
+      - if @companies_offer_capabilities_you_looking_for_in_same_city.present?
+        %li.b-actionable-intel-item
+          = link_to @companies_offer_capabilities_you_looking_for_in_same_city, companies_url(by_tags: @company.capabilities_lookedfor_list.join(','), search_by_tags_mode: :offer_tags, by_state: @company.primary_address.state_id, by_city: @company.primary_address.city), class: 'b-actionable-intel__link'
+          .b-actionable-intel__body
+            Of the companies offering capabilities you need are in the same city as you are in

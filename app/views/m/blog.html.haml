@@ -1,0 +1,60 @@
+.c-content= render 'm/shared/page_title', title: 'Blog', description: 'Hear about the latest and greatest here at Glowfori'
+.b-blog
+  .c-content
+    .b-blog__columns
+      .b-blog__left-column
+        %ul
+          %li.b-blog__item.b-blog-item
+            %h3.b-blog-item__title Lorem ipsum dolor sit amet
+            .b-blog-item__date 03.05.2013
+            .b-blog-item__body
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+              volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            = link_to 'Read More', '#', class: 'b-blog-item__link'
+
+          %li.b-blog__item.b-blog-item
+            %h3.b-blog-item__title Lorem ipsum dolor sit amet
+            .b-blog-item__date 03.05.2013
+            .b-blog-item__body
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+              volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            = link_to 'Read More', '#', class: 'b-blog-item__link'
+
+          %li.b-blog__item.b-blog-item
+            %h3.b-blog-item__title Lorem ipsum dolor sit amet
+            .b-blog-item__date 03.05.2013
+            .b-blog-item__body
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+              volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            = link_to 'Read More', '#', class: 'b-blog-item__link'
+
+      .b-blog__right-column
+        .b-blog__right-column-body
+          .b-blog__right-column-title Categories
+          .b-blog-categories
+            = succeed ',' do
+              = link_to 'Companies', '#', class: 'b-blog-categories__link'
+            = succeed ',' do
+              = link_to 'SME', '#', class: 'b-blog-categories__link'
+            = succeed ',' do
+              = link_to 'SEO', '#', class: 'b-blog-categories__link'
+            = succeed ',' do
+              = link_to 'Travel', '#', class: 'b-blog-categories__link'
+            = succeed ',' do
+              = link_to 'Technology', '#', class: 'b-blog-categories__link'
+            = succeed ',' do
+              = link_to 'Cooking', '#', class: 'b-blog-categories__link'
+            = link_to 'Engineering', '#', class: 'b-blog-categories__link'
+
+          .b-blog__right-column-title Monthly Archive
+          .b-blog-archive
+            = link_to 'May 2013 (2)', '#', class: 'b-blog-archive__link'
+            = link_to 'April 2013 (23)', '#', class: 'b-blog-archive__link'
+            = link_to 'March 2013 (2)', '#', class: 'b-blog-archive__link'
+

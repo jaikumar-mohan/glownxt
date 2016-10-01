@@ -1,0 +1,79 @@
+@import "compass/reset";
+
+body {
+  font-family: "Open Sans","Microsoft YaHei","微软雅黑","Hiragino Sans GB","Hiragino Sans GB W3","Helvetica Neue",Arial,sans-serif;;
+  font-size: 13px;
+}
+* { outline: none; }
+:focus { outline:none; }
+::-moz-focus-inner { border:0; }
+
+textarea:-moz-placeholder { color: #252525; }
+textarea::-webkit-input-placeholder { color: #252525; }
+
+input::-webkit-input-placeholder { color: #252525; }
+input:-moz-placeholder { color: #252525; }
+
+@font-face {
+  font-family: "din_mittelschrift_stdregular";
+  src: font_url('type/dinmittelschriftstd-webfont-webfont.eot');
+  src: font_url('type/dinmittelschriftstd-webfont-webfont.eot?#iefix') format('embedded-opentype'), font_url('type/dinmittelschriftstd-webfont-webfont.woff') format('woff'), font_url('type/dinmittelschriftstd-webfont-webfont.ttf') format('truetype'), font_url('type/dinmittelschriftstd-webfont-webfont.svg#din_mittelschrift_stdregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo Bold";
+  src: font_url("type/Exo-Bold.eot?") format("eot"), font_url("type/Exo-Bold.woff") format("woff"), font_url("type/Exo-Bold.ttf") format("truetype"), font_url("type/Exo-Bold.svg#Exo-Bold") format("svg");
+  font-weight:normal;
+  font-style:normal;
+}
+
+@font-face {
+  font-family: "Exo Demi Bold";
+  src: font_url("type/Exo-DemiBold.eot?") format("eot"), font_url("type/Exo-DemiBold.woff") format("woff"), font_url("type/Exo-DemiBold.ttf") format("truetype"), font_url("type/Exo-DemiBold.svg#Exo-DemiBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo Regular";
+  src: font_url("type/Exo-Regular.eot?") format("eot"), font_url("type/Exo-Regular.woff") format("woff"), font_url("type/Exo-Regular.ttf") format("truetype"), font_url("type/Exo-Regular.svg#Exo-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTStd-BlkExO';
+  src: font_url('type/HelveticaNeueLTStd-BlkExO-autohinted.eot');
+  src: font_url('type/HelveticaNeueLTStd-BlkExO-autohinted.eot?#iefix') format('embedded-opentype'),
+  font_url('type/HelveticaNeueLTStd-BlkExO.woff') format('woff'),
+  font_url('type/HelveticaNeueLTStd-BlkExO-autohinted.ttf') format('truetype'),
+  font_url('type/HelveticaNeueLTStd-BlkExO.svg#dejavu_sansbook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Hv';
+  src: font_url('type/HelveticaNeueLTStd-Hv-autohinted.eot');
+  src: font_url('type/HelveticaNeueLTStd-Hv-autohinted.eot?#iefix') format('embedded-opentype'),
+  font_url('type/HelveticaNeueLTStd-Hv.woff') format('woff'),
+  font_url('type/HelveticaNeueLTStd-Hv-autohinted.ttf') format('truetype'),
+  font_url('type/HelveticaNeueLTStd-Hv.svg#dejavu_sansbook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo Extra Bold";
+  src: font_url("type/Exo-ExtraBold.eot?") format("eot"),font_url("type/Exo-ExtraBold.woff") format("woff"),font_url("type/Exo-ExtraBold.ttf") format("truetype"),font_url("type/Exo-ExtraBold.svg#Exo-ExtraBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo Regular Italic";
+  src: font_url("type/Exo-Regular-Italic.eot?") format("eot"),font_url("type/Exo-Regular-Italic.woff") format("woff"),font_url("type/Exo-Regular-Italic.ttf") format("truetype"),font_url("type/Exo-Regular-Italic.svg#Exo-Regular-Italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

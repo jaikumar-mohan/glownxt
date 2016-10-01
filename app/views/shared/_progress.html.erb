@@ -1,0 +1,26 @@
+<center>
+  <br/>
+  <div class="steps">
+    <%
+        seen_active = false
+        steps.each_with_index do |text, idx|
+          active = current == text || current == idx
+    %>
+            <div class="step <%= 'current' if active %> <%= 'after-current' if seen_active%>">
+              <div class="left-side"></div>
+              <div class="step-no"><%= idx + 1 %></div>
+              <div class="step-text"><%= text %></div>
+              <div class="right-side"></div>
+            </div>
+
+            <% unless idx == steps.length - 1 %>
+              <div class="separator">
+                <div></div>
+              </div>
+            <% end %>
+      <%
+          seen_active ||= active
+        end
+      %>
+  </div>
+</center>

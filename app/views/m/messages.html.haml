@@ -1,0 +1,10 @@
+.c-content.b-private-messages
+  = render 'm/shared/company_info', name: 'ACME'
+  .s-table
+    = render 'messages/table_sidebar'
+    = render 'messages/table_header'
+    .companies_container
+      = render 'messages/table'
+  .b-private-messages__post-form= render 'm/shared/post_form', rows: 7, placeholder: 'Post a Glow to the companies you would like to partner with (max 5)'
+= content_for :javascript_code do
+  Messages.init();

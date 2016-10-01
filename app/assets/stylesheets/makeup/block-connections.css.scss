@@ -1,0 +1,132 @@
+.b-actionable-intel {
+  .b-actionable-intel-item {
+    margin: 5px 0 20px;
+  }
+
+  .b-actionable-intel__body {
+    line-height: 18px;
+  }
+
+  .b-actionable-intel__link {
+    color: #f07230;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.b-connections {
+  .b-connections__form, .b-connections__glow_form {
+    margin-bottom: 20px;
+    float: left;
+  }
+
+  .b-connections__form {
+    width: 350px;
+  }
+
+  .b-connections__glow_form {
+    width: 360px;
+    margin-left: 20px;
+  }
+
+  .b-connections__table-cell {
+    padding: 7px 17px;
+    width: 50%;
+    vertical-align: top;
+    border-right: 1px solid #ccc;
+  }
+
+  .b-connections__not-glowing {
+    line-height: 18px;
+    margin-top: 10px;
+
+    small {
+      font-size: 11px;
+    }
+
+    a {
+      color: #f07230;
+    }
+  }
+
+  .b-connections__table-row {
+    &>.b-connections__table-cell:first-child {
+      padding-left: 0;
+    }
+
+    &>.b-connections__table-cell:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+  }
+
+  .b-connections__table {
+    width: 100%;
+  }
+
+  .b-connections__columns {
+    overflow: hidden;
+    clear: left;
+  }
+
+  .b-connections__left-column {
+    float: left;
+    width: 350px;
+  }
+
+  .b-connections__right-column {
+    width: 580px;
+    margin-left: 380px;
+  }
+
+  .b-connections__stats-title {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .b-connections__tags-title {
+    font-size: 13px;
+    margin: 10px 0;
+  }
+
+  .b-connections__stats-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f07230;
+    padding: 15px 0px;
+
+    a {
+      color: #f07230;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  .b-connections__table-labels {
+    width: 270px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .b-connections__activity {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    height: 230px;
+
+    .b-connections__table-cell {
+      border-right: none;
+      padding-top: 15px;
+    }
+  }
+}

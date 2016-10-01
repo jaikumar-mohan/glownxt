@@ -1,0 +1,1 @@
+= select_tag :tags_search_mode, options_for_select([ ['by offer tags', 'offer_tags'], ['by looked tags', 'looked_tags'], ['by certificates', 'certificates'] ],selected: "#{params[:search_by_tags_mode].present? ? params[:search_by_tags_mode] : 'offer_tags' }"), class: 'companies_search_filter'

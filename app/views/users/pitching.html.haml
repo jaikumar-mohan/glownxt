@@ -1,0 +1,15 @@
+- provide(:title, 'Authenticate Data')
+
+.c-content= render 'm/shared/page_title', title: "Tell the network about #{@company.company_name}."
+= render 'm/shared/steps', step: 3
+.c-content.sign_up_3
+  = render 'users/sign_up/step_3_upload_logo', company: @company
+  = render 'users/sign_up/step_3'
+
+= render 'companies/fileupload_tmpl'
+
+= content_for(:javascript_code) do
+  CompanyLogoUpload.init();
+  CompanyTags.init();
+  CountriesAndStatesAutcomplete.init();
+  SignUpStep3.init();

@@ -1,0 +1,10 @@
+- placeholder ||= ''
+- rows ||= 4
+- limit ||= false
+%form.b-post-form
+  .s-textarea
+    %textarea{placeholder: placeholder, rows: rows}
+  .b-post-form__tools
+    - if limit
+      .b-post-form__hint 140 Characters remaining
+    %button.s-btn POST

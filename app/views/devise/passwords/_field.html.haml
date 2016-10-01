@@ -1,0 +1,4 @@
+%span.s-inline-input{ class: "required" }
+  = label_tag "user[email]", 'Email', class: '' 
+  = text_field_tag "user[email]", params[:email], class: 'js-input_email', autofocus: true
+= universal_error_box('email')

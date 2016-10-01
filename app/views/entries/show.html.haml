@@ -1,0 +1,25 @@
+- provide(:title, 'Blog')
+
+.c-content= render 'm/shared/page_title', title: 'Blog', description: @entry.title
+.b-blog
+  .c-content
+    .b-blog__columns
+      .b-blog__left-column
+        .b-blog-item
+          %h3.b-blog-item__title 
+            = @entry.title
+          .b-blog-item__date 
+            = l(@entry.created_at, format: :date)
+          .b-blog-item__body
+            %p
+              = @entry.body
+
+      .b-blog__right-column
+        .b-blog__right-column-body
+          - if @previous.present?
+            .b-blog__right-column-title Previous Articles
+            - @previous.each do |e|
+              .b-blog-archive
+                = link_to e.title, entry_path(e), class: 'b-blog-archive__link'
+
+

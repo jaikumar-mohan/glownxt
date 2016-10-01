@@ -1,0 +1,2 @@
+module GlowsHelper
+end

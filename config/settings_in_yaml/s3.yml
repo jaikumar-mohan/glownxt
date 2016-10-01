@@ -1,0 +1,10 @@
+staging:
+  s3:
+    bucket: 'glowcon'
+    aws_access_key_id: 'AKIAIVP6U5Z6R5FNYRIQ'
+    aws_secret_access_key: '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'
+production:
+  s3:
+    bucket: 'glowforiprod'
+    aws_access_key_id: 'AKIAIVP6U5Z6R5FNYRIQ'
+    aws_secret_access_key: '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'

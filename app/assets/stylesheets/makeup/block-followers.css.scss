@@ -1,0 +1,42 @@
+.b-followers {
+  padding: 0;
+
+
+  .b-followers__item {
+    padding: 20px 30px 20px 0px;
+    border-bottom: 1px solid #ccc;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .b-followers__avatar {
+    float: left;
+  }
+
+  .b-followers__info {
+    margin: 0 250px 0 70px;
+    font-size: 15px;
+    line-height: 20px;
+    min-height: 50px;
+  }
+
+  .b-followers__tools {
+    float: right;
+    padding-top: 5px;
+    white-space: nowrap;
+    .s-btn {
+      min-width: 110px;
+    }
+  }
+
+  .b-followers__name {
+    font-weight: bold;
+    color: #f07230;
+  }
+
+  .b-followers__description {
+
+  }
+}

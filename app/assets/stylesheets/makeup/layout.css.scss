@@ -1,0 +1,265 @@
+@import "compass";
+@import "compass/css3";
+@import "compass/utilities";
+
+.l-main {
+  .l-main__socnet {
+    padding: 40px 0;
+  }
+}
+
+.b-logo {
+  background: asset_url('m/logo.png') no-repeat center center transparent;
+  display: block;
+  height: 42px;
+  width: 150px;
+}
+
+.b-logo-big {
+  background: asset_url('m/logo-big.png') no-repeat center center transparent;
+  display: inline-block;
+  height: 120px;
+  width: 400px;
+}
+
+.b-navigation {
+  text-align: right;
+  font-size: 14px;
+
+  .b-navigation__link {
+    color: #000;
+    display: block;
+    text-decoration: none;
+  }
+
+  .b-navigation__item {
+    display: inline-block;
+    padding: 12px 19px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    @include border-radius(4px);
+
+    &.current {
+      background: #ccc;
+      .b-navigation__link {
+        color: #fff;
+      }
+    }
+
+    &:hover {
+      background: #f07230;
+      color: #fff;
+      @include border-radius(4px);
+
+      .b-navigation__link {
+        color: #fff;
+      }
+    }
+  }
+
+  .b-navigation__sub-link {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 19px;
+    text-transform: none;
+    text-align: left;
+  }
+
+  .b-navigation__sub-item {
+    white-space: nowrap;
+  }
+
+  .b-navigation__sub-list {
+    background: #f07230;
+    display: none;
+    left: 0;
+    padding: 8px 0;
+    position: absolute;
+    top: 42px;
+    @include border-radius(4px);
+  }
+
+  .b-navigation__item-right-link {
+    padding: 12px 30px 12px 19px;
+    position: relative;
+
+
+    &:after {
+      content: "";
+      width: 10px;
+      height: 6px;
+      top: 16px;
+      right: 13px;
+      display: block;
+      position: absolute;
+      background: url(/assets/m/dropdown-arrows-small.png) bottom center;
+    }
+
+    &.single {
+      padding: 0px 0px 0px 0px;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .b-navigation__item-right {
+    background: #f07230;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 0;
+    position: relative;
+    @include border-radius(4px);
+    opacity: 0.9;
+
+    &.active, &:hover {
+      opacity: 1;
+    }
+    &.active {
+      .b-navigation__sub-list {
+        display: block;
+      }
+
+      .b-navigation__item-right-link:after {
+        background-position: top center;
+        top: 14px;
+      }
+    }
+  }
+
+  .b-navigation__list {
+  }
+}
+
+.b-header {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 40px;
+  .b-header__logo {
+    padding: 10px 20px;
+    float: left;
+  }
+
+  .b-header__navigation {
+    padding: 10px 0;
+    margin-left: 200px;
+  }
+}
+
+.b-company-info {
+  line-height: 70px;
+  padding-bottom: 40px;
+  overflow: hidden;
+
+  .b-company-info__logo {
+    border: 5px solid #F07230;
+    height: 60px;
+    margin-left: 20px;
+    width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .b-company-info__text {
+    width: 570px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .b-company-info__title {
+    display: inline-block;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 20px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .b-company-info__name {
+    display: inline-block;
+    font-size: 38px;
+    font-weight: bold;
+    margin-left: 20px;
+    vertical-align: middle;
+    line-height: 45px;
+    margin-bottom: 10px;
+  }
+
+  .b-company-info__tools {
+    float: right;
+    margin-right: 20px;
+  }
+}
+
+.b-footer {
+  border-top: 1px solid #e5e5e5;
+
+
+  .b-footer__copy {
+    color: #959595;
+    float: left;
+    font-size: 13px;
+    padding-left: 20px;
+    white-space: nowrap;
+  }
+
+  .b-footer__links {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 380px;
+    text-align: right;
+    text-transform: uppercase;
+    width: 580px;
+  }
+
+  .b-footer__link {
+    color: #959595;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0 20px;
+    &:hover {
+      color: #888;
+    }
+  }
+}
+
+.b-page-header {
+  margin-bottom: 40px;
+  padding: 0 20px;
+
+  .b-page-header__title {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 24px;
+
+    text-align: center;
+  }
+
+  .b-page-header__description {
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 23px;
+    color: #898989;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+.b-private-messages {
+  .b-private-messages__post-form {
+    margin-right: 300px;
+  }
+
+}
+
+.b-sidebar-logo {
+  width: 100px;
+  height: 60px;
+  margin-bottom: 18px;
+  display: block;
+}

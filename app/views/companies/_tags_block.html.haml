@@ -1,0 +1,14 @@
+= f.label :capabilities_offered_list, "Capabilities you offer"
+.tag_autocomplete_block
+  = f.hidden_field :capabilities_offered_list, :value => f.object.capabilities_offered_list.join(', ')
+  %ul.tag_variants#capabilities_offered_list
+
+= f.label :capabilities_lookedfor_list, "Capabilities you look for"
+.tag_autocomplete_block
+  = f.hidden_field :capabilities_lookedfor_list, :value => f.object.capabilities_lookedfor_list.join(', ')
+  %ul.tag_variants#capabilities_lookedfor_list
+
+= f.label :company_certification_list, "Certifications your company holds"
+.tag_autocomplete_block
+  = f.hidden_field :company_certification_list, :value => f.object.company_certification_list.join(', ')
+  %ul.tag_variants#company_certification_list

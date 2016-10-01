@@ -1,0 +1,29 @@
+.b-profile__content#company_services
+  .b-profile__title Company Profile
+  / .b-profile__subtitle Services
+
+  = form_for(current_user.company, url: profile_path(current_user.company), method: :patch, html: { class: 'b-form' }, remote: true) do |f|
+    = hidden_field_tag :from, :services
+
+    .company_services_block
+      = f.label :company_profile, "elevator pitch", class: 's-single-label'
+      .s-textarea
+        = f.text_area :company_profile, rows: 4  
+      .company_textarea_hint.pull-right.countdown{ data: { limit: 250 } } 250 Characters remaining
+    .company_services_block
+      = f.label :company_mission, "what we do", class: 's-single-label'  
+      .s-textarea
+        = f.text_area :company_mission, rows: 4
+      .company_textarea_hint.pull-right.countdown{ data: { limit: 2000 } } 2000 Characters remaining  
+    .company_services_block
+      = f.label :company_services, "products & services", class: 's-single-label'
+      .s-textarea
+        = f.text_area :company_services, rows: 4 
+      .company_textarea_hint.pull-right.countdown{ data: { limit: 2000 } } 2000 Characters remaining
+    / .company_services_block
+    /   = f.label :products_description, "Describe your products", class: 's-single-label'
+    /   .s-textarea
+    /     = f.text_area :products_description, rows: 4
+    /   .company_textarea_hint.pull-right.countdown{ data: { limit: 2000 } } 2000 Characters remaining  
+
+    = render 'companies/edit_blocks/submit_block'

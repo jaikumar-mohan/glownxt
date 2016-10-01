@@ -1,0 +1,54 @@
+.b-profile.c-content
+  = render 'm/shared/page_title', title: 'Edit Company Profile'
+  .b-profile__container
+    .b-profile__sidebar
+      %ul.b-sidebar-menu
+        %li.b-sidebar-menu__item= link_to 'User Data', '#', class: 'b-sidebar-menu__link'
+        %li.b-sidebar-menu__item
+          = link_to 'Company Data', '#', class: 'b-sidebar-menu__link'
+          %ul.b-sidebar-menu
+            %li.b-sidebar-menu__item= link_to 'Marketing Intellegence', '#', class: 'b-sidebar-menu__link'
+            %li.b-sidebar-menu__item= link_to 'Company Services', '#', class: 'b-sidebar-menu__link'
+            %li.b-sidebar-menu__item= link_to 'Demographics', '#', class: 'b-sidebar-menu__link current'
+
+    .b-profile__content
+      .b-profile__title Company Data
+      .b-profile__subtitle Demographics
+
+      %form.b-form
+        %p
+          %label.s-single-label Company Logo
+          .b-company-logo
+            .b-company-logo__image
+              %img{src: '/assets/m/block-company-logo.png', width: 137, height: 137}
+            .b-company-logo__tools
+              %button.s-btn Browse
+              .b-company-logo__text * jpeg, png, gif only
+              %button.s-btn Upload
+        %p
+          %label.s-single-label Street
+          %input.s-input{type:'text'}
+        %p
+          %label.s-single-label Postal Code / Zip
+          %input.s-input{type:'text'}
+        %p
+          %label.s-single-label Main Telephone Number
+          %input.s-input{type:'text'}
+        %p
+          %label.s-single-label City
+          %input.s-input{type:'text'}
+        %p
+          %label.s-single-label State
+          %input.s-input{type:'text'}
+        %p
+          %label.s-single-label Company HQ Country
+          %input.s-input{type:'text'}
+        %p
+          %label.s-single-label Web Site
+          %input.s-input{type:'text'}
+        %p
+          %label.s-single-label Certifications Your Company Holds
+          .s-textarea
+            %textarea{rows: 4}
+
+        %button.b-profile__submit.s-btn Submit

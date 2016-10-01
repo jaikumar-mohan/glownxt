@@ -1,0 +1,17 @@
+%tr{ id: dom_id(company) }
+  %td.b-table__company-name
+    .name
+      = truncate(company.company_name, length: 40)
+    .title
+      = truncate(company.company_profile, length: 240)
+    = link_to '', company_path(company), class: 'company_details_link'
+  %td{style: "width:170px" }
+    .b-table__tags
+      = tags_list(company, params[:search_by_tags_mode])
+  %td{style: "width:90px" }
+    .b-table__city
+      = company.addresses.first.city if company.addresses.first.present?
+  %td{style: "width:80px" }
+    .b-table__country
+      = company.addresses.first.country.try(:name) if company.addresses.first.present?
+  %td.b-table__checkbox

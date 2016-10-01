@@ -1,0 +1,14 @@
+.b-blog__right-column
+  .b-blog__right-column-body
+    - if @categories.any?
+      .b-blog__right-column-title Categories
+      .b-blog-categories
+        - @categories.each do |c|
+          = succeed ',' do
+            = link_to c.name, category_entries_path(c.name), class: 'b-blog-categories__link'
+
+    - if @dates.any?
+      .b-blog__right-column-title Monthly Archive
+      .b-blog-archive
+        - @dates.each do |c|
+          = link_to c.strftime('%B %Y'), archive_entries_path(c.to_i), class: 'b-blog-archive__link'

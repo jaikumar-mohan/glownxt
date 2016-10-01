@@ -1,0 +1,12 @@
+- btn ||= false
+- title ||= false
+- name ||= ''
+.b-company-info
+  - if btn
+    .b-company-info__tools
+      %button.s-btn-warning Follow
+
+  .b-company-info__text
+    - if title
+      .b-company-info__title= title
+    .b-company-info__name= name

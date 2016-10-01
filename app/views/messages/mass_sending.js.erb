@@ -1,0 +1,10 @@
+$( '#new_micropost' ).find( '.s-btn' ).show();
+$( '#new_micropost' ).find( '.loading_spinner' ).hide();
+
+<% if @company_ids.blank? %>
+  $( '.group_message_no_companies_error' ).show();
+<% elsif @company_ids.count > 5 %>
+  $( '.group_message_error' ).show();
+<% else %>
+  Messages.select_and_show(<%= @message.blank? %>);
+<% end %>

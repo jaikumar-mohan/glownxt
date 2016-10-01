@@ -1,0 +1,4 @@
+.b-company-info__tools
+  = form_for(current_user.relationships.find_by_followed_id(company.user.id), html: { method: :delete }, remote:true) do |f|
+    = hidden_field_tag :from, :glows
+    = f.submit "Unfollow", class: "s-btn-warning"

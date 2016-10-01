@@ -1,0 +1,6 @@
+- if current_user.id != company.user.id
+  #follow_form{class: "user_#{company.user.id}" }
+    - if current_user.following?(company.user)
+      = render 'relationships/unfollow', company: company
+    - else
+      = render 'relationships/follow', company: company

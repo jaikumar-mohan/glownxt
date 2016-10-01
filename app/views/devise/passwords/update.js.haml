@@ -1,0 +1,6 @@
+- if @redirect_url.present?
+  window.location.href = "#{@redirect_url}";
+- else
+  ResetPassword.hide_spinner();
+  $('.reset_password .fields_container').html("#{escape_javascript(render('devise/passwords/edit_fields'))}");
+  FocusInput.init("password");

@@ -1,0 +1,8 @@
+- type ||= 'text'
+- required ||= false
+- additional_class = ''
+- if required
+  - additional_class += 'required'
+%span.s-inline-input{class: "#{additional_class}"}
+  %label{for: id}= label
+  %input{type: type, id: id}

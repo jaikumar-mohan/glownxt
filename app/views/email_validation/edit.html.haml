@@ -1,0 +1,15 @@
+- provide(:title, "Email Confirmation")
+
+.c-content
+  = render 'm/shared/page_title', title: "Welcome to the network #{@user.company.company_name}."
+= render 'm/shared/steps', step: 2
+.c-content.sign_up_step_2_verification
+  - if @user.confirmed?
+    = render 'users/sign_up/step_2'
+  - else
+    = render 'email_validation/check_email_message'
+
+= content_for(:javascript_code) do
+  - if @user.confirmed?
+    CompanyTags.init();
+    SignUpStep2.init();

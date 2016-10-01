@@ -1,0 +1,14 @@
+- if @redirect_url.present?
+  window.location.href = "#{@redirect_url}";
+- else
+  HomePage.hide_spinner();
+  - if params[:from_sign_in_page].present?
+    $('.fields_container').html("#{escape_javascript(render('devise/sessions/sign_in_fields'))}");
+  - else
+    $('.fields_container').html("#{escape_javascript(render('devise/sessions/fields'))}");
+    - if @errors.size > 1
+      $('.submit_block').css('margin-top', '-25px');
+    - else
+      $('.submit_block').css('margin-top', '0px');
+- input_type = (@errors['email'].blank? && @errors['password'].present?) ? 'password' : 'email'
+FocusInput.init("#{input_type}");

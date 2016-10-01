@@ -1,0 +1,38 @@
+<% 
+  fields = User::CommonFormFields - ["company_name", "password", "password_confirmation"] 
+%>
+
+<%= form_for @user, :url => email_validation_path(params[:id]), html: { class: 'center-submit' } do |f| %>
+
+  <% fields.each do |field_name| %>
+    <%= render 'users/field', field_name: field_name, f: f %>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Update", class: "btn btn-primary span2", name: 'update-user'  %>
+  </div>
+  <br/>
+
+  <p class="blue center smaller regular-italic">
+    You can always update these details later<br/>
+    in your membership profile.
+  </p>
+
+  <br/>
+  <p class="center">
+    <%= image_tag 'arrow.png' %>
+  </p>
+  <br/>
+  <p class="white bigger center">
+    To get started we need 3 data points about
+    <br/>
+    <%= @user.company.company_name %>
+  </p>
+  <%= f.fields_for :company do |c| %>
+    <%= c.text_area :company_profile, :rows => 3, :placeholder => "Your Companies elevator pitch in 250 characters or less ...", :class => 'span6 black-holder' %>
+    <%= render 'email_validation/tags_block', user: @user, c: c %>
+  <% end %>
+  <br/>
+  <br/>
+  <%= f.submit 'Next', class: 'btn btn-primary span2', name: 'update-company' %>
+<% end %>

@@ -1,0 +1,16 @@
+.b-header
+  .c-content
+    .b-header__logo= link_to '', root_url, class: 'b-logo'
+    .b-header__navigation
+      %nav.b-navigation
+        %ul.b-navigation__list
+          %li.b-navigation__item.current= link_to 'Home', '#', class: 'b-navigation__link'
+          %li.b-navigation__item= link_to 'Profile', '#', class: 'b-navigation__link'
+          %li.b-navigation__item= link_to 'Companies', '#', class: 'b-navigation__link'
+          %li.b-navigation__item.b-navigation__item-right
+            .b-navigation__item-right-link.js-navigation-toggle-account Account
+
+            %ul.b-navigation__sub-list
+              %li.b-navigation__sub-item= link_to 'Edit Company Profile', '#', class: 'b-navigation__sub-link'
+              %li.b-navigation__sub-item= link_to 'Log out', '#', class: 'b-navigation__sub-link'
+

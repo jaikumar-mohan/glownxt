@@ -1,0 +1,7 @@
+%li.b-actionable-intel-item
+  = link_to "#{tagname} (#{count})", companies_url(by_tags: tagname, search_by_tags_mode: by_tags), class: 'b-actionable-intel__link'
+  .b-actionable-intel__body
+    - if by_tags.to_s == 'offer_tags'
+      Companies are currently offering capabilities, that your company looking for.
+    - else
+      Companies are currently looking for capabilities your company offers.

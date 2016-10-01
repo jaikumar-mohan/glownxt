@@ -1,0 +1,25 @@
+%p
+  = label_tag "user['first_name']", 'First Name', class: 's-single-label'
+  = text_field_tag "user[first_name]", current_user.first_name, { class: 's-input' }
+  = user_error_box('first_name')
+
+%p
+  = label_tag "user['last_name']", 'Last Name', class: 's-single-label'
+  = text_field_tag "user[last_name]", current_user.last_name, { class: 's-input' }
+  = user_error_box('last_name')
+
+%p
+  = label_tag "user['email']", 'Email', class: 's-single-label'
+  = text_field_tag "user[email]", current_user.email, { class: 's-input' }
+  = user_error_box('email')
+
+%p.pwdcalc.input.stringish#user_password_input
+  = label_tag "user[password]", "Password", class: 's-single-label'
+  = text_field_tag "user[password]", params[:user].present? ? params[:user][:password] : '', { class: "s-input", type: 'password', autocomplete: :off } 
+  = label_tag "password-strength", "", {class: 'password-strength-meter pwdcalc', 'data-field' => 'user_password'}
+  = user_error_box('password')
+
+%p.password_confirmation_block
+  = label_tag "user['password_confirmation']", 'Password Confirmation', class: 's-single-label'
+  = text_field_tag "user[password_confirmation]", params[:user].present? ? params[:user][:password_confirmation] : '', { class: 's-input', type: 'password', autocomplete: :off  }
+  = user_error_box('password_confirmation')   

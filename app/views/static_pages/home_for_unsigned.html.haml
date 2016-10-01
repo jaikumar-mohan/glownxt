@@ -1,0 +1,27 @@
+.b-home
+  .b-home__logo
+    = link_to '', root_url, class: 'b-logo-big'
+  %h1.b-home__slogan
+    Home to the connected companies.
+    %br
+    Finding trusted quality partners the first time.
+  .b-home__auth
+    = link_to 'Sign up Now', signup_path, class: 's-btn-warning'
+  .b-home__tour Take a Tour
+
+  .b-home__row
+    .b-home__form.sign_in
+      .s-rounded-box
+        %h2.s-header Please enter your details
+        = render 'sessions/form'
+
+    .b-home__tags
+      .s-rounded-box
+        %h2.s-header Available Today on Glowfori
+        .s-tags
+          - @tags.each_slice(4).each_with_index do |tags_block, index|
+            - tags_block.each do |tag|
+              = link_to tag.name, companies_url(by_tags: tag.name), class: "s-tags__tag #{tag_css_class(index)}"
+
+= content_for(:javascript_code) do
+  HomePage.init();

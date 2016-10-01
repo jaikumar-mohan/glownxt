@@ -1,0 +1,155 @@
+.b-steps {
+  width: 1620px;
+  height: 72px;
+  margin: -20px auto 50px;
+
+  .b-steps__content {
+    background: asset_url('m/block-steps-line.png') repeat-x center #fff;
+    height: 72px;
+    position: relative;
+  }
+
+  .b-steps__item {
+    display: block;
+    height: 72px;
+    padding: 0 22px 0 40px;
+    background: asset_url('m/sprite.png') no-repeat right -207px #fff;
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+
+    &:before {
+      position: absolute;
+      height: 72px;
+      width: 40px;
+      top: 0;
+      left: 0;
+      background: asset_url('m/sprite.png') no-repeat left -207px #fff;
+      content: '';
+    }
+
+    &.b-steps__active {
+      background-position: right -135px;
+      padding: 0 30px 0 20px;
+
+      &:before {
+        background-position: left -135px;
+        width: 20px;
+      }
+    }
+
+    &.b-steps__success {
+      background-position: right -279px;
+      padding: 0 30px 0 20px;
+
+      &:before {
+        background-position: left -279px;
+        width: 20px;
+      }
+    }
+  }
+
+  .b-steps__number {
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 7px;
+    line-height: 53px;
+  }
+
+  .b-steps__description {
+    font-size: 12px;
+  }
+
+  .b-steps__1 {
+    left: 0px;
+  }
+
+  .b-steps__2 {
+    right: 180px;
+
+    &.b-steps__active, &.b-steps__success {
+      left: 180px;
+      right: auto;
+    }
+  }
+
+  .b-steps__3 {
+    right: 0px;
+
+    &.b-steps__active {
+      left: 404px;
+      right: auto;
+    }
+  }
+
+  &.b-steps__current-step-1 {
+    .b-steps__content {
+      margin-left: 420px;
+      margin-right: 180px;
+    }
+  }
+
+  &.b-steps__current-step-2 {
+    .b-steps__content {
+      margin-left: 200px;
+      margin-right: 410px;
+    }
+  }
+
+  &.b-steps__current-step-3 {
+    .b-steps__content {
+      margin-left: 20px;
+      margin-right: 1100px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .b-steps {
+    width: 980px;
+
+    &.b-steps__current-step-1, &.b-steps__current-step-2 {
+      .b-steps__content {
+        margin-left: 80px;
+        margin-right: 80px;
+      }
+    }
+
+    &.b-steps__current-step-3 {
+      .b-steps__content {
+        margin-left: 80px;
+        margin-right: 397px;
+      }
+    }
+  }
+}
+
+.b-auth {
+  .b-auth__title {
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .b-auth__text {
+    font-size: 15px;
+    font-style: italic;
+    color: #f07230;
+    text-align: center;
+  }
+
+  .b-auth__btn {
+    margin: 45px 0;
+  }
+
+  .b-auth__hint {
+    color: #00adeb;
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    margin: 20px 0 0;
+  }
+
+}

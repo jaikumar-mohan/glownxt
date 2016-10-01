@@ -1,0 +1,8 @@
+$( '.companies_container' ).html("<%= escape_javascript(render(
+  'messages/table'
+)) %>");
+
+Messages.js_scroll_bar_init();
+Messages.set_next_pagination_step("<%= @companies.total_pages > @companies.current_page ? @companies.current_page + 1 : 0 %>");
+Messages.auto_loading_companies_on_scroll_to_the_bottom();
+Messages.correct_height_for_container("<%= @companies.length %>");

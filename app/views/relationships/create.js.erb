@@ -1,0 +1,8 @@
+<% if params[:from].to_s == 'glows' %>
+  $("#follow_form.user_<%= @user.id %>").html("<%= escape_javascript(render(
+    'relationships/unfollow', company: @user.company
+  )) %>")
+<% else %>
+  $("#follow_form.user_<%= @user.id %>").html("<%= escape_javascript(render('relationships/unfollow', company: @user.company)) %>")
+  $("#followers").html('<%= @user.followers.count %>')
+<% end %>

@@ -1,0 +1,12 @@
+/%li.b-navigation__item{ class: active_tab?('about') }
+/  = link_to "About", about_path, class: "b-navigation__link"
+/ %li.b-navigation__item{ class: active_tab?('blog') }
+/   =# link_to "Blog", entries_path, class: "b-navigation__link"
+
+- if @active_tab != 'home'
+  %li.b-navigation__item{ class: active_tab?('home') }
+    = link_to "Home", root_path, class: "b-navigation__link"
+
+%li.b-navigation__item.b-navigation__item-right
+  .b-navigation__item-right-link.single.js-navigation-toggle-account
+    = link_to "Sign in", new_user_session_path, class: 'b-navigation__link sign_in_link'

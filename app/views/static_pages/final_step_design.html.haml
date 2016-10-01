@@ -1,0 +1,54 @@
+- provide(:title, 'Welcome')
+- content_for :page_heading do
+  .company-welcome
+    Welcome
+    %span ACME
+.s-white-bg.pull-up.relative
+  .container
+    %ul.row
+      %li.span4.center
+        = link_to 'Create glows', '#'
+      %li.span4.center
+        = link_to 'Make connections', '#'
+      %li.span4.center
+        = link_to 'Get found @ glow', '#'
+.container.b-final-step
+  .row
+    .span4.center
+      %p.large-text
+        Start following companies
+        and share public or private
+        messages in your network.
+      %p.small-text
+        Use your Glows to share knowledge,
+        Find leads, share services, ideas,
+        products and innovations.
+      = link_to "Let's go", '#', class: 'btn btn-primary btn-huge'
+
+
+    .span4.center
+      %p.large-text
+        You told us what you were
+        looking for. On your home
+        page we found all the
+        companies that offer what
+        you are looking for.
+      %p.small-text
+        Start following these companies,
+        Share a glow or connect privately.
+      = link_to "Let's go", '#', class: 'btn btn-primary btn-huge'
+
+    .span4.center
+      %p.large-text
+        To be found you have to be
+        known. Glowfori operates on
+        Matching needs with
+        capabilities. Hone your data
+        skills by continuously
+        reviewing the capabilities
+        you offer.
+      %p.small-text
+        We have written a small guide to help you
+        become the best at  representing
+        your companies  capabilities.
+      = link_to "Let's go", '#', class: 'btn btn-primary btn-huge'

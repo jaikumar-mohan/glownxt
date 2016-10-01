@@ -1,0 +1,33 @@
+.c-content= render 'm/shared/page_title', title: 'Tell the network about ACME ltd.'
+= render 'm/shared/steps', step: 3
+.c-content
+  %form.s-form.b-auth
+    .b-auth__title Adding your logo is a good start
+    %p.s-form__btn
+      %button.s-btn Upload
+    .b-auth__hint Files accepted - jpeg, png
+    .s-form__arrow-down
+    .s-form__group
+      %p= render 'm/shared/inline_input', id: 'a', label: 'Street'
+      %p= render 'm/shared/inline_input', id: 'b', label: 'Postal Code / Zip'
+      %p= render 'm/shared/inline_input', id: 'c', label: 'City'
+
+    .s-form__group
+      %p= render 'm/shared/inline_input', id: 'd', label: 'State'
+      %p= render 'm/shared/inline_input', id: 'e', label: 'Country - HQ'
+      %p= render 'm/shared/inline_input', id: 'f', label: 'Company website'
+
+    .s-form__group
+      .s-textarea
+        %textarea{rows: 4, placeholder: 'if ACME ltd. has any industry certifications, type ahead and select  as many tags as you want - add new tags if nothing fits your company.'}
+
+    .s-form__arrow-down
+    .s-form__group
+      .s-textarea
+        %textarea{rows: 4, placeholder: 'ACME ltd. offers to their costumers a series of .............. complete your offering here. This is what the network will see on your profile page. You can alway update this later.'}
+    .s-form__group
+      .s-textarea
+        %textarea{rows: 10, placeholder: 'You can descibe servcies products in detail here.'}
+
+    %p.s-form__footer
+      %button.s-btn Submit

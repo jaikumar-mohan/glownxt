@@ -1,0 +1,12 @@
+- provide(:title, 'Sign up')
+
+.c-content
+  = render 'm/shared/page_title', title: 'Sign Up'
+= render 'm/shared/steps', step: 1
+.c-content
+  = render 'users/sign_up/step_1'
+
+= content_for(:javascript_code) do
+  SignUpStep1.init();
+  FocusInput.init("first_name");
+  PasswordStrength.init();

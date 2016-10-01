@@ -1,0 +1,66 @@
+- provide(:title, 'Welcome')
+- content_for :page_heading do
+  .company-welcome
+    Peter @
+    %span ACME
+
+
+.s-table
+  .s-table__sidebar
+  .s-table__header
+    %table
+      %thead
+        %tr
+          %th{style: "width:250px" } Company Name
+          %th{style: "width:170px" } Offers
+          %th{style: "width:90px" } City
+          %th{style: "width:80px" } Country
+          %th Select
+  .s-table__content
+    %table
+      %tbody
+        %tr
+          %td.b-table__company-name
+            .name ACME
+            .title 250 Char of pitch text
+          %td{style: "width:170px" }
+            .b-table__tags A list of tags and skills
+          %td{style: "width:90px" }
+            .b-table__city Copenhagen
+          %td{style: "width:80px" }
+            .b-table__country Denmark
+          %td.b-table__checkbox
+
+        %tr.active
+          %td.b-table__company-name
+            .name ACME
+            .title 250 Char of pitch text
+          %td
+            .b-table__tags A list of tags and skills
+          %td
+            .b-table__city CopenhagenCopenhagen
+          %td
+            .b-table__country DenmarkDenmark
+          %td.b-table__checkbox
+        %tr
+          %td.b-table__company-name
+            .name ACME
+            .title 250 Char of pitch text
+          %td
+            .b-table__tags A list of tags and skills
+          %td
+            .b-table__city Copenhagen Copenhagen
+          %td
+            .b-table__country Denmark Denmark
+          %td.b-table__checkbox
+
+
+.b-connections
+  .row.nomargin
+    .b-message-textbox.pull-left.clearfix
+      %form.new_micropost.s-ta-single
+        .field
+          %textarea#micropost_content.fullwidth{:name => "micropost[content]", :placeholder => "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.", :rows => "8"}
+        .button-container.pull-right
+          %span.countdown 140 characters remaining
+          %input.btn.btn-primary{:name => "commit", :type => "submit", :value => "Post"}

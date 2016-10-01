@@ -1,0 +1,13 @@
+%td.b-connections__table-cell
+  %h3.b-connections__tags-title Here are matches to what you are offering
+  %ul.b-connections__table-labels
+    - if @top_wanted_capabilities.present?
+      - @top_wanted_capabilities.each do |tagname, count|
+        %li.s-label
+          = link_to companies_url(by_tags: tagname, search_by_tags_mode: :offer_tags) do
+            .s-label__text
+              = tagname
+            .s-label__value
+              = count
+    - else
+      %span No entries yet

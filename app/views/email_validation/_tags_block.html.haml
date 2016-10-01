@@ -1,0 +1,15 @@
+= c.label :capabilities_offered_list, "Capabilities you offer", class: 's-single-label'
+%i.tags_block_description
+  = "#{user.company.company_name} offers what capabilities - type ahead and select as many tags as you want - add new tags if nothing fits your company."
+
+.tag_autocomplete_block
+  = c.hidden_field :capabilities_offered_list, :value => c.object.capabilities_offered_list.join(', ')
+  %ul.tag_variants#capabilities_offered_list
+
+= c.label :capabilities_lookedfor_list, "Capabilities you look for", class: 's-single-label'
+%i.tags_block_description
+  = "#{user.company.company_name} is looking for what capabilities - type ahead and select as many tags as you want - add new tags if nothing fits your company."
+
+.tag_autocomplete_block
+  = c.hidden_field :capabilities_lookedfor_list, :value => c.object.capabilities_lookedfor_list.join(', ')
+  %ul.tag_variants#capabilities_lookedfor_list

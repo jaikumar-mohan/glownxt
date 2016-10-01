@@ -1,0 +1,4 @@
+%span.s-inline-input{ class: "required" }
+  = label_tag "user[#{field_name}]", field_name == 'password_confirmation' ? 'Verify Password' : custom_label_text(field_name), class: '' 
+  = text_field_tag "user[#{field_name}]", ( @user.persisted? ? @user.send(field_name) : user_field_previous_value(field_name.to_sym) ), { class: "js-input_#{field_name}", type: ['password', 'password_confirmation'].include?(field_name) ? 'password' : 'text' } 
+= sign_up_1_error_box(field_name)

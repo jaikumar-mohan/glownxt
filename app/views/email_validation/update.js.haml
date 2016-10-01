@@ -1,0 +1,5 @@
+- if @redirect_url.present?
+  window.location.href = "#{@redirect_url}";
+- else
+  SignUpStep2.hide_spinner();
+  $('.sign_up_step_2_verification .fields_container').html("#{escape_javascript(render('users/sign_up/step_2_fields'))}");

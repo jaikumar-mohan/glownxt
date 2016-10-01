@@ -1,0 +1,78 @@
+.b-post-form {
+  .b-post-form__tools {
+    padding: 0px 0 0px;
+    text-align: right;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+  }
+
+  .b-post-form__hint {
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 15px;
+    color: #f07230;
+  }
+}
+
+.b-dashboard {
+  overflow: hidden;
+
+  .b-dashboard__title {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+
+    &.warning {
+      color: #f07230;
+    }
+  }
+
+  .b-dashboard__header {
+    padding: 0 20px 30px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .b-sidebar-logo {
+      display: inline-block;
+      margin: 0;
+      vertical-align: middle;
+    }
+  }
+
+  .b-dashboard__pitch {
+    margin-left: 30px;
+    display: inline-block;
+    width: 780px;
+    white-space: normal;
+    vertical-align: middle;
+    line-height: 18px;
+    font-size: 14px;
+  }
+
+  .b-dashboard__pitch-link {
+    color: #f07230;
+  }
+
+  .b-dashboard__row {
+    margin-bottom: 50px;
+  }
+
+  .b-dashboard__left-column {
+    float: left;
+    width: 340px;
+    margin-left: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000;
+  }
+
+  .b-dashboard__right-column {
+    width: 550px;
+    margin: 0 20px 0 390px;
+    &.b-dashboard__row {
+      margin-bottom: 38px;
+    }
+  }
+}

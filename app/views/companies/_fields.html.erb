@@ -1,0 +1,9 @@
+<%#= render 'shared/error_messages', object: f.object %>
+<%= combined_field f, :company_name, :text_field, field_options: { class: 'span4' } %>
+<%= combined_field f, :company_domain, :text_field, field_options: { class: 'span4' } %>
+<%= combined_field f, :company_country, :text_field, field_options: { class: 'span4' }, label_title: 'Country-HQ' %>
+<%= combined_field f, :company_name, :text_field, field_options: { class: 'span4' } %>
+<br/>
+<%= f.text_area :company_profile, placeholder: "Writing a few sentences about your company...", :rows => 8, :class => 'fix-text-area black-holder span6' %>
+<br/>
+<br/>

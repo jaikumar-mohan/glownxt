@@ -1,0 +1,20 @@
+- provide(:title, 'Companies')
+
+.c-content.b-private-messages
+  =# render 'm/shared/company_info', name: 'ACME'
+  = render 'messages/search_box'
+  .s-table.company_table
+    = render 'messages/table_sidebar'
+    = render 'messages/table_header'
+    .companies_container
+      = render 'messages/table'
+  = render 'messages/loading_spinner'
+  .b-private-messages__post-form
+    = render 'messages/status_messages'
+    = render 'messages/group_message_form'
+
+= content_for :javascript_code do
+  Messages.init();
+  MicropostLength.init();
+  CompanyTags.init();
+  CountriesAndStatesAutcomplete.init();

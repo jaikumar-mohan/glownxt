@@ -1,0 +1,153 @@
+.c-content
+  = render 'm/shared/company_info', name: 'ACME'
+
+  .b-connections
+    .b-connections__columns
+      .b-connections__left-column
+        .b-connections__form= render 'm/shared/post_form', placeholder: 'Leave a private Glow message for ACME ltd.', limit: true
+        %h2.s-header-left Actionable marketing Intelligence
+        %table.b-connections__table
+          %tr.b-connections__table-row
+            %td.b-connections__table-cell
+              %ul.b-actionable-intel
+                %li.b-actionable-intel-item
+                  = link_to '120', '#', class: 'b-actionable-intel__link'
+                  .b-actionable-intel__body
+                    Companies are currently looking for capabilities your company offers.
+                    Companies are currently looking for capabilities your company offers.
+
+                %li.b-actionable-intel-item
+                  = link_to 'Network Security', '#', class: 'b-actionable-intel__link'
+                  .b-actionable-intel__body
+                    Companies are currently looking for capabilities your company offers.
+
+                %li.b-actionable-intel-item
+                  = link_to '120', '#', class: 'b-actionable-intel__link'
+                  .b-actionable-intel__body
+                    Companies are currently looking for capabilities your company offers.
+                    Companies are currently looking for capabilities your company offers.
+
+            %td.b-connections__table-cell
+              %ul.b-actionable-intel
+                %li.b-actionable-intel-item
+                  = link_to '120', '#', class: 'b-actionable-intel__link'
+                  .b-actionable-intel__body
+                    Companies are currently looking for capabilities your company offers.
+                    Companies are currently looking for capabilities your company offers.
+
+                %li.b-actionable-intel-item
+                  = link_to 'Network Security', '#', class: 'b-actionable-intel__link'
+                  .b-actionable-intel__body
+                    Companies are currently looking for capabilities your company offers.
+
+                %li.b-actionable-intel-item
+                  = link_to '120', '#', class: 'b-actionable-intel__link'
+                  .b-actionable-intel__body
+                    Companies are currently looking for capabilities your company offers.
+                    Companies are currently looking for capabilities your company offers.
+          %tr.b-connections__table-row
+            %td.b-connections__table-cell
+              %ul.b-connections__table-labels
+                %li.s-label
+                  .s-label__text Ruby on Rails
+                  .s-label__value 3134
+
+                %li.s-label
+                  .s-label__text sprint planning
+                  .s-label__value 22
+
+                %li.s-label
+                  .s-label__text planning
+                  .s-label__value 42
+
+                %li.s-label
+                  .s-label__text sprint
+                  .s-label__value 2
+
+                %li.s-label
+                  .s-label__text sprint sprint sprint sprint sprint planning sprint planning
+                  .s-label__value 987654
+
+            %td.b-connections__table-cell
+              %ul.b-connections__table-labels
+                %li.s-label
+                  .s-label__text Ruby on Rails
+                  .s-label__value 3134
+
+                %li.s-label
+                  .s-label__text sprint sprint sprint sprint sprint planning sprint planning
+                  .s-label__value 987654
+
+                %li.s-label
+                  .s-label__text sprint
+                  .s-label__value 2
+
+                %li.s-label
+                  .s-label__text sprint planning
+                  .s-label__value 22
+
+                %li.s-label
+                  .s-label__text planning
+                  .s-label__value 42
+
+          %tr.b-connections__table-row
+            %td.b-connections__table-cell
+              .s-rounded-box-compact
+                %h3.b-connections__stats-title Companies we found
+                .b-connections__stats-value 1234
+            %td.b-connections__table-cell
+              .s-rounded-box-compact
+                %h3.b-connections__stats-title Companies That found us
+                .b-connections__stats-value 34523
+
+      .b-connections__right-column
+        %h2.s-header Glows Feed
+        .s-rounded-box-compact
+          .b-comments
+            %ul.b-comments__list
+              %li.b-comments__item.b-comment
+                = image_tag 'sample/avatar.png', class: 'b-comment__avatar'
+                .b-comment__body
+                  = link_to 'Nick Mayburg', '#', class: 'b-comment__link'
+                  .b-comment__text
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                  .b-comment__tools
+                    = link_to 'Delete', '#', class: 'b-comment__link js-comments-destroy-link'
+                    %span.b-comment__date 2 days ago
+              %li.b-comments__item.b-comment
+                = image_tag 'sample/avatar.png', class: 'b-comment__avatar'
+                .b-comment__body
+                  = link_to 'Nick Mayburg', '#', class: 'b-comment__link'
+                  .b-comment__text
+                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+                  .b-comment__tools
+                    = link_to 'Delete', '#', class: 'b-comment__link js-comments-destroy-link'
+                    %span.b-comment__date 2 days ago
+              %li.b-comments__item.b-comment
+                = image_tag 'sample/avatar.png', class: 'b-comment__avatar'
+                .b-comment__body
+                  = link_to 'Nick Mayburg', '#', class: 'b-comment__link'
+                  .b-comment__text
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+                  .b-comment__tools
+                    = link_to 'Delete', '#', class: 'b-comment__link js-comments-destroy-link'
+                    %span.b-comment__date 2 days ago
+              %li.b-comments__item.b-comment
+                = image_tag 'sample/avatar.png', class: 'b-comment__avatar'
+                .b-comment__body
+                  = link_to 'Nick Mayburg', '#', class: 'b-comment__link'
+                  .b-comment__text
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                  .b-comment__tools
+                    = link_to 'Delete', '#', class: 'b-comment__link js-comments-destroy-link'
+                    %span.b-comment__date 2 days ago
+              %li.b-comments__item.b-comment
+                = image_tag 'sample/avatar.png', class: 'b-comment__avatar'
+                .b-comment__body
+                  = link_to 'Nick Mayburg', '#', class: 'b-comment__link'
+                  .b-comment__text
+                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+                  .b-comment__tools
+                    = link_to 'Delete', '#', class: 'b-comment__link js-comments-destroy-link'
+                    %span.b-comment__date 2 days ago

@@ -1,0 +1,12 @@
+%li.b-comments__item.b-comment{ id: dom_id(comment) }
+  /= link_to gravatar_for(comment.user, size: 50), company_path(comment.user.company), class: 'b-comment__avatar'
+  .b-comment__body
+    = link_to comment.user.company.company_name, company_path(comment.user.company), class: 'b-comment__link'
+    .b-comment__text
+      = h(comment.content)
+    .b-comment__tools
+      - if comment.user_id == current_user.id
+        = form_for(comment, url: micropost_comment_url(comment.parent, comment), html: {method: :delete, class: 'remove_micropost_form' }, remote: true) do |f|
+          = link_to "Delete", '#', class: "b-comment__link js-comments-destroy-link"
+      %span.b-comment__date
+        = h(distance_of_time_in_words(comment.updated_at, Time.zone.now))

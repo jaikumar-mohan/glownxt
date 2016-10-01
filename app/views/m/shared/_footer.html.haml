@@ -1,0 +1,11 @@
+.b-footer
+  .c-content
+    .b-footer__copy Copyright © 2012 - 2013 Glowfori Connected Companies
+    %nav.b-footer__links
+      - if params[:action] == 'home'
+        = link_to 'Contact Us', '#', class: 'b-footer__link'
+        = link_to 'Blog', '#', class: 'b-footer__link'
+
+      - else
+        = link_to 'Data Protection Policies', '#', class: 'b-footer__link'
+        = link_to 'Membership Code of Conduct Policy', '#', class: 'b-footer__link'

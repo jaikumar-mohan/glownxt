@@ -1,0 +1,5 @@
+.b-company-info__tools
+  = form_for(current_user.relationships.build(followed_id: company.user.id), remote:true) do |f|
+    = f.hidden_field :followed_id
+    = hidden_field_tag :from, :glows
+    = f.submit "Follow", class: "s-btn-warning"

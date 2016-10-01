@@ -1,0 +1,41 @@
+.b-bottom
+  .b-footer-u-1
+    - unless signed_in?
+      .b-footer-g
+        .b-footer
+          .c-content
+            .b-footer-u-2-5
+              .b-footer__slogan-about
+                About Glowfori.
+              %br
+              .b-footer__p
+                We are a community provider for small to medium sized creative and technology that often need to find partners to solve briefs or to develop their own products. The power of connecting trustworthy professional companies to help them increase the capability and offerings is what drives us daily and our vision for creating positive social change.
+            .b-footer-u-1-5
+            .b-footer-u-2-5
+              .b-footer__slogan-connect
+                Connect with us
+                %br
+                .b-black-h1
+                  = render 'layout_components/social_nav'
+
+
+        .b-footer-g
+          .b-black
+            .b-black__row
+              .b-footer-u-1-2
+              .b-footer-u-1-2
+                Copyright © 2012 - 2013 Glowfori Connected Companies -
+                = link_to "Contact Us", new_contact_path, class: 'b-black__link js-off_page_link'
+                =# link_to 'Blog', entries_path, class: 'b-footer__link'
+
+    - else
+      .b-black
+        .c-content
+          .b-footer-g
+            .b-black-signed
+              .b-black__row
+                .b-footer-u-1-4
+                .b-footer-u-3-4
+                  Copyright © 2012 - 2013 Glowfori Connected Companies
+                  = link_to 'Terms & Conditions', terms_path, class: 'b-black__link js-off_page_link'
+                  = link_to 'Code of conduct', code_path, class: 'b-black__link js-off_page_link'

@@ -1,0 +1,14 @@
+- btn ||= false
+- title ||= false
+- logo ||= false
+- name ||= ''
+
+.b-company-info
+  .b-company-info__text
+    - if logo
+      = image_tag @company.logo.url(:medium), class: 'b-company-info__logo'
+    - if title
+      .b-company-info__title= title
+    .b-company-info__name= name
+  - if btn
+    = render 'relationships/follow_block'

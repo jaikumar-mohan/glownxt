@@ -1,0 +1,45 @@
+.b-welcome {
+  .b-welcome__header {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .b-welcome__header-title {
+    width: 33%;
+    float: left;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 15px 0;
+    color: #f07230;
+    text-decoration: none;
+  }
+
+  .b-welcome__columns {
+    width: 100%;
+  }
+
+  .b-welcome__column {
+    text-align: justify;
+    width: 33%;
+    padding: 20px 29px 40px;
+    font-size: 16px;
+    line-height: 22px;
+    vertical-align: top;
+    &.center {
+      text-align: center;
+    }
+    .s-btn { min-width: 130px; }
+
+    .highlighted{
+      text-decoration: none;
+      color: #000;
+      &:hover {
+        color: #f07230;
+      }
+    }
+  }
+}

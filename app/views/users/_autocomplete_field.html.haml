@@ -1,0 +1,4 @@
+%span.s-inline-input
+  = f.label field_name, label_title, class: ''
+  = f.text_field field_name, class: 'hidden', id: "company_#{field_name}"
+  = text_field_tag field_name, nil, class: 'span4 no-left-border'

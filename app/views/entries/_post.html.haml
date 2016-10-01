@@ -1,0 +1,8 @@
+%li.b-blog__item.b-blog-item
+  %h3.b-blog-item__title
+    = entry.title
+  .b-blog-item__date
+    = l(entry.created_at, format: :date)
+  .b-blog-item__body
+    = entry.brief
+  = link_to 'Read More', entry, class: 'b-blog-item__link'

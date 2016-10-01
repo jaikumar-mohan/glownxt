@@ -1,0 +1,15 @@
+- provide(:title, 'Blog')
+
+.c-content= render 'm/shared/page_title', title: 'Blog', description: 'Hear about the latest and greatest here at Glowfori'
+.b-blog
+  .c-content
+    .b-blog__columns
+      .b-blog__left-column
+        %ul
+          -@entries.each do |entry|
+            = render 'entries/post', entry: entry
+
+        = h(paginate @entries)
+      = render 'entries/sidebar'
+
+

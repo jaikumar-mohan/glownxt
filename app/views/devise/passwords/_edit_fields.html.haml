@@ -1,0 +1,11 @@
+%li.s-inline-input.pwdcalc.input.stringish.required#user_password_input
+  = label_tag "user[password]", "Password" 
+  = password_field_tag "user[password]", nil, { class: "js-input_password", autofocus: true } 
+  %p.password-strength-meter.pwdcalc{'data-field' => 'user_password'}
+= sign_up_1_error_box(:password)
+
+
+%span.s-inline-input.required
+  = label_tag 'user[password_confirmation]', 'Verify Password'
+  = password_field_tag 'user[password_confirmation]', ''
+= sign_up_1_error_box(:password_confirmation)

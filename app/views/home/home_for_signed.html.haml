@@ -1,0 +1,29 @@
+- provide(:title, 'Welcome')
+.c-content
+  = render 'layout_components/company_info', name: @company.company_name
+.b-welcome
+  .b-welcome__header
+    .c-content
+      = link_to 'Get Found', connections_path, class: 'b-welcome__header-title'
+      = link_to 'Find Companies', companies_path, class: 'b-welcome__header-title'
+      = link_to 'Start Glowing', company_path(@company), class: 'b-welcome__header-title'
+  .c-content
+    %table.b-welcome__columns
+      %tr
+        %td.b-welcome__column
+          %p
+            Your company profile page is the key to being discovered by other
+            <strong class=highlighted>glowfori</strong> members. The more you tell us about you company the more we
+            can match you with other community members.
+        %td.b-welcome__column
+          %p
+            Search for other <strong class=highlighted>glowfori</strong> members based on their capabilities, location,
+            and objectives. Explore the community and make your own connections.
+        %td.b-welcome__column
+          %p
+            Glows are messages between members. They can be private conversations, messages to yor followers or public
+            broadcasts. Start interacting with other <strong class=highlighted>glowfori</strong> members.
+      %tr
+        %td.b-welcome__column.center= link_to 'LET\'S GO', connections_path, class: 's-btn-warning'
+        %td.b-welcome__column.center= link_to 'LET\'S GO', companies_path, class: 's-btn-warning'
+        %td.b-welcome__column.center= link_to 'LET\'S GO', company_path(@company), class: 's-btn-warning'            

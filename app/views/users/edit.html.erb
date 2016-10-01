@@ -1,0 +1,15 @@
+<% provide(:title, "Edit user") %>
+<% provide(:page_heading, "Update your profile") %>
+<div class="spacer"></div>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user, html: {class: 'center-submit'}) do |f| %>
+      <%= render 'fields', f: f %>
+      <br/>
+      <%= f.submit "Save", class: "btn btn-primary" %>
+    <% end %>
+
+    <%= gravatar_for @user, size: 40 %>
+    <a href="http://gravatar.com/emails" data-popup="true">change</a>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+$( '#new_micropost' ).find( '.s-btn' ).show();
+$( '#new_micropost' ).find( '.loading_spinner' ).hide();
+
+Messages.select_and_show(<%= @micropost.blank? %>, true, true);
+<% if @micropost.present? %>
+  $( '#b-feeds__container' ).prepend("<%= escape_javascript(render(
+      'microposts/micropost', micropost: @micropost
+    )) %>");
+  $( '.no_glows_yet' ).remove();
+<% end %>

@@ -1,0 +1,8 @@
+<%= provide(:title, 'Dashboard') %>
+<%= provide(:page_heading, 'Dashboard') %>
+
+<div class="row">
+  <%= link_to "Create Glows", company_glows_url(current_user.company) %>
+  <%= link_to "Make Connections", connections_url %>
+  <%= link_to "Get Found", messages_url %>
+</div>

@@ -1,0 +1,17 @@
+- provide(:title, "Edit Password") 
+
+- if flash[:notice].present?
+  - description = "#{flash[:notice]} Enter your email address below and we'll send your password reset instructions."
+- else
+  - description = "Can't sign in? Forget your password? Enter your email address below and we'll send your password reset instructions."
+
+.c-content.reset_password
+  = render 'm/shared/page_title', title: 'Reset your Password', description: description
+  = form_for(resource, as: resource_name, url: user_password_path(resource_name), method: :post, html: { class: 's-form' }, remote: true) do
+    .fields_container
+      = render 'devise/passwords/field'
+    = render 'devise/passwords/submit_block', title: 'Reset'
+
+= content_for(:javascript_code) do
+  ResetPassword.init();
+

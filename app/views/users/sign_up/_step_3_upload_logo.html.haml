@@ -1,0 +1,15 @@
+= form_for @company, url: change_logo_profile_path(@company), html: { class: "file-field-container s-form b-auth", multipart: true, method: :patch }, remote: true, authenticity_token: true do |f|
+
+  = f.file_field :logo, size: 2, class: 'hidden'
+
+  .b-auth__title Adding your logo is a good start
+  .b-company-logo
+    .b-company-logo__image
+      = image_tag company.logo.url(:large)
+    .b-company-logo__tools
+  %p.s-form__btn
+    %button.s-btn.js-file-emulator Upload
+  .b-auth__hint * jpg, jpeg, png, gif only (less than 2MB) 
+  %span.upload_error_message.hidden
+  .company-progress-bar-container
+  .s-form__arrow-down

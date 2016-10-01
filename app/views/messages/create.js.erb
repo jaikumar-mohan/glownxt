@@ -1,0 +1,4 @@
+$( '#new_micropost' ).find( '.btn' ).show();
+$( '#new_micropost' ).find( '.loading_spinner' ).hide();
+
+Messages.select_and_show(<%= @message.blank? %>, true);
