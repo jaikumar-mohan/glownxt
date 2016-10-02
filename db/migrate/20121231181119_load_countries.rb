@@ -2,7 +2,7 @@ class LoadCountries < ActiveRecord::Migration
   def up
 
     # load
-    require File.expand_path('../../seed/state_country_seeds.rb', __FILE__)
+    #require File.expand_path('../../seed/state_country_seeds.rb', __FILE__)
 
   end
 
