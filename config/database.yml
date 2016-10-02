@@ -8,8 +8,10 @@ development:
   encoding: unicode
   host: localhost
   database: glowfori
+  #user: glowfori
+  #password: glowforipass
   user: glowfori
-  password: glowforipass
+  password: glowfori
   pool: 5
   port: 5432
   timeout: 5000
