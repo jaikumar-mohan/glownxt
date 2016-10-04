@@ -15,6 +15,7 @@ Glowcon::Application.configure do
   config.action_controller.perform_caching = true
 
   # Don't care if the mailer can't send.
+  config.action_mailer.default_url_options = { :host => 'glownxt.herokuapp.com' }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -26,7 +27,7 @@ Glowcon::Application.configure do
       :authentication => "plain",
       :enable_starttls_auto => true
   }
-
+  config.action_mailer.perform_deliveries = true
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
@@ -59,7 +60,7 @@ Glowcon::Application.configure do
   config.log_level = :info
 
   # Mailer settings
-  config.action_mailer.default_url_options = { :host => 'glownxt.herokuapp.com' }
+  
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
@@ -79,7 +80,7 @@ Glowcon::Application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
