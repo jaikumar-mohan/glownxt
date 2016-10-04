@@ -10,7 +10,7 @@ Glowcon::Application.routes.draw do
       unlocks: "users/unlocks"
     }
   devise_scope :user do
-    get 'confirm/:confirmation_token', to: 'devise/confirmations#show'
+    get 'confirm/:confirmation_token', to: 'users/confirmations#show'
   end 
   resources :entries, only: [:show, :index]
 
