@@ -3,9 +3,9 @@ if Rails.env.production? || Rails.env.development?
   Glowcon::Application.config.action_mailer.smtp_settings = {
     address:               'smtpout.europe.secureserver.net',
     port:                  80,
-    domain:                'glowfori.com',
-    user_name:             'account-creation-development@glowfori.com',
-    password:              'dev2013',
+    domain:                'gmail.com',
+    user_name:             'chatwithjai@gmail.com',
+    password:              'gmailjai',
     authentication:        'plain',
     enable_starttls_auto:  true
   }
