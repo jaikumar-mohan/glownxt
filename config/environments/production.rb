@@ -22,8 +22,8 @@ Glowcon::Application.configure do
       :address => "smtp.gmail.com",
       :domain => "gmail.com",
       :port => 587,
-      :user_name => "chatwithjai@gmail.com",
-      :password => "gmailjai",
+      :user_name => "jbjegan12@gmail.com",
+      :password => "jbjegan#212",
       :authentication => "plain",
       :enable_starttls_auto => true
   }
