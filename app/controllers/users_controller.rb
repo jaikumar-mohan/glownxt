@@ -30,7 +30,8 @@ class UsersController < ApplicationController
       check_sign_up_information
     elsif @user.save
       #@redirect_url = edit_email_validation_url(@user)
-      @redirect_url = edit_email_validation_url(@user)
+      #@redirect_url = edit_email_validation_url(@user)
+      redirect_to root_url
     else
       check_sign_up_information
       unregistred_email
