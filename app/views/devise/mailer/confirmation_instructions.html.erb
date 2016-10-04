@@ -4,7 +4,7 @@
 </p>
 
 <%#= link_to 'Click here to validate', edit_email_validation_url(@resource, confirmation_token: @resource.confirmation_token) %>
-<p><%= link_to 'Confirm my acount', confirm_url(@token) %></p>
+<p><%= link_to 'Confirm my acount', edit_email_validation_url(@token) %></p>
 <p>If you did not sign-up at Glowfori, just ignore this email.</p>
 
 <p>Regards</p>
