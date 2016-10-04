@@ -24,7 +24,7 @@ Glowcon::Application.configure do
       :user_name => "chatwithjai@gmail.com",
       :password => "gmailjai",
       :authentication => "plain",
-      :enable_starttls_auto => false
+      :enable_starttls_auto => true
   }
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
