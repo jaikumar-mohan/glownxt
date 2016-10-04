@@ -9,9 +9,11 @@ Glowcon::Application.routes.draw do
       confirmations: "users/confirmations",
       unlocks: "users/unlocks"
     }
-  devise_scope :user do
-    get 'confirm/:confirmation_token', to: 'users/confirmations#show'
-  end 
+  
+  #devise_scope :user do
+   # get 'confirm/:confirmation_token', to: 'users/confirmations#show'
+  #end 
+  
   resources :entries, only: [:show, :index]
 
   get '/archive/:month', to: 'entries#index', as: 'archive_entries'
