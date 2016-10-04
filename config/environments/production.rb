@@ -59,7 +59,7 @@ Glowcon::Application.configure do
   config.log_level = :info
 
   # Mailer settings
-  config.action_mailer.default_url_options = { :host => 'glowfori.com' }
+  config.action_mailer.default_url_options = { :host => 'gmail.com' }
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
