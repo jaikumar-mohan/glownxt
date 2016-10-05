@@ -15,17 +15,17 @@ Glowcon::Application.configure do
   config.action_controller.perform_caching = true
 
   # Don't care if the mailer can't send.
-  config.action_mailer.default_url_options = { :host => 'https://glowcon-staging.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'https://glownxt.herokuapp.com' }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      :address => "smtpout.europe.secureserver.net",
-      :domain => "glowfori.com",
-      :port => 80,
-      :user_name => "account-creation-development@glowfori.com",
-      :password => "dev2013",
+      :address => "smtp.gmail.com",
+      :domain => "gmail.com",
+      :port => 587,
+      :user_name => "jbjegan12@gmail.com",
+      :password => "jbjegan#212",
       :authentication => "plain",
-      :enable_starttls_auto => false
+      :enable_starttls_auto => true
   }
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
