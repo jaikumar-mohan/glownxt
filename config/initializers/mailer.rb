@@ -1,7 +1,7 @@
 if Rails.env.production? || Rails.env.development?
   Glowcon::Application.config.action_mailer.delivery_method = :smtp
   Glowcon::Application.config.action_mailer.smtp_settings = {
-    address:               'smt.gmail.com',
+    address:               'smtp.gmail.com',
     port:                  587,
     domain:                'smtp.gmail.com',
     user_name:             'jbjegan12@gmail.com',
