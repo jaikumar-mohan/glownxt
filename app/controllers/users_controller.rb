@@ -1,5 +1,6 @@
 require 'validations_on_views/sign_up'
 require 'validations_on_views/edit_user_params'
+require 'resolv-replace'
 
 class UsersController < ApplicationController
 
