@@ -6,6 +6,8 @@
         %li.s-label
           = link_to companies_url(by_tags: tagname, search_by_tags_mode: :offer_tags) do
             .s-label__text
-              = tagname              
+              = tagname
+            .s-label__value
+              = count              
     - else
       %span No entries yet
