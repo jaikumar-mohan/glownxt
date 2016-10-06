@@ -75,7 +75,7 @@ class Company < ActiveRecord::Base
     addresses.first || addresses.build
   end
 
-  has_attached_file :logo, styles: { large: '137x137#', medium: '100x60#', thumb: '50x50#' }, default_url: "missing.gif"
+  has_attached_file :logo, styles: { large: '137x137#', medium: '100x60#', thumb: '50x50#' }, default_url: "logo-din-medium-black.png"
   validates_attachment :logo, size: { in: 1..2.megabytes }, content_type: { content_type: %r{^image/(?:png|jpe?g|gif)\b}i, message: 'not an image or empty file' }
 
   validates :company_name, presence: true, uniqueness: {case_sensitive: false}
